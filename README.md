@@ -1,11 +1,11 @@
 # Diaguard
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Release](https://img.shields.io/badge/Release-v1-478063.svg)](https://github.com/Faltenreich/Diaguard/releases)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Release](https://img.shields.io/badge/Release-v1-478063.svg)](https://github.com/yahiaprt/MyDiabetes)
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 <img src="./resource/image/marketing/showcase.png" width="750"> 
 
-Diaguard is an Android app for people with diabetes mellitus.
+MyDiabetes is an Android app for people with diabetes mellitus.
 
 It replaces the handwritten diary and helps the user to quickly and easily record, evaluate and export his blood sugar and other important data as PDF or CSV. Thanks to the clearly arranged interface, the user always has an overview of his diabetes. The app also provides information on several thousand maklas including carbohydrates and other nutritions.
 
@@ -35,29 +35,29 @@ Development of Diaguard started in October 2013. It was as one of several small 
 
 #### Goals
 
-Diaguard should help diabetics with monitoring their diabetes. It should be able to replace the handwritten diary completely and to supplement tasks like basal rate tests or carb counting. It should help diabetologists with monitoring their patients regularly and when preparing a health insurance application. 
+Mydiabetes should help diabetics with monitoring their diabetes. It should be able to replace the handwritten diary completely and to supplement tasks like basal rate tests or carb counting. It should help diabetologists with monitoring their patients regularly and when preparing a health insurance application. 
 
-Diaguard's users should always be and feel in full control. All user-generated data must stay on the same device until the user explicitely decides to transfer something to another device, e.g. during an export or backup. Nothing is shared with remote services and network is only used to read data from a makla database.</br>User data must not be lost. Therefor database migrations enable user data to be carried from version 1.0 to any existing and upcoming release.
+Mydiabetes's users should always be and feel in full control. All user-generated data must stay on the same device until the user explicitely decides to transfer something to another device, e.g. during an export or backup. Nothing is shared with remote services and network is only used to read data from a makla database.</br>User data must not be lost. Therefor database migrations enable user data to be carried from version 1.0 to any existing and upcoming release.
 
-Diaguard should be accessible to most people. Therefor its design is heavily influenced by the [Material Design Guidelines](https://material.io/design) and tested with accessibility tools like [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) and [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor).
+Mydiabetes should be accessible to most people. Therefor its design is heavily influenced by the [Material Design Guidelines](https://material.io/design) and tested with accessibility tools like [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) and [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor).
 
-Diaguard should only be used under the supervision of a diabetologist.</br>
-Diaguard should not be used by minors without the supervision of a parent or legal guardian.</br>
-Diaguard is not a medical app and serves no therapeutical purpose.
+Mydiabetes should only be used under the supervision of a diabetologist.</br>
+Mydiabetes should not be used by minors without the supervision of a parent or legal guardian.</br>
+Mydiabetes is not a medical app and serves no therapeutical purpose.
 
 #### Business model
 
 There is none. 
 
-Diaguard exists for three reasons: for learning, for fun and for saying thank you. This app kickstarted the career of a professional software developer by leading through the whole software lifecycle: creating a concept, building software from scratch, publishing it to the masses and maintaining a legacy project with additions sprinkled here and there. Additionally it was and is pure fun to enhance this app and to see feedback from a helpful and thankful community. Last but not least Diaguard is a way of giving something back.
+Mydiabetes exists for three reasons: for learning, for fun and for saying thank you. This app kickstarted the career of a professional software developer by leading through the whole software lifecycle: creating a concept, building software from scratch, publishing it to the masses and maintaining a legacy project with additions sprinkled here and there. Additionally it was and is pure fun to enhance this app and to see feedback from a helpful and thankful community. Last but not least Diaguard is a way of giving something back.
 
-For these reasons, Diaguard has been, is and will always be free of cost.
+For these reasons, Mydiabetes has been, is and will always be free of cost.
 
 If you want to buy me a beer or support me in general, please use the donate button and be aware of my thanks.
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AM6HG633T4BWY&source=url">
- <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" width="100"/>
-</a>
+## <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AM6HG633T4BWY&source=url">
+##  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" width="100"/>
+## </a>
 
 ## Development
 
@@ -73,7 +73,7 @@ English is used as general language for naming things. Everything except the con
 
 #### Architecture
 
-There are two architectural design patterns that are being used for Diaguard: [Model-View-Controller](https://en.wikipedia.org/wiki/Model%e2%80%93view%e2%80%93controller) and [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design).
+There are two architectural design patterns that are being used for Mydiabetes: [Model-View-Controller](https://en.wikipedia.org/wiki/Model%e2%80%93view%e2%80%93controller) and [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design).
 
 Model-View-Controller (MVC) was a widely spread design pattern in the early days of Android development until Google presented its Architecture Components in 2017 and Model-View-ViewModel (MVVM) took over. A gradual transition to MVVM is planned due to its advantages over MVC, e.g. regarding encapsulation and testability. 
 
@@ -119,11 +119,11 @@ These dependencies are bundled with Diaguard but under the terms of their respec
 
 #### Redistribution
 
-Additionally to the permissions, conditions and limitations of the GPLv3, the permission for redistribution must be manually requested in advance. This ensures that neither the original software or any fork will be affected negatively by terms and conditions like the [Google Play Developer Distribution Agreement](https://play.google.com/about/developer-distribution-agreement.html). If you plan to redistribute this software, please contact the maintainer at [diaguard.de@gmail.com](mailto:diaguard.de@gmail.com).
+Additionally to the permissions, conditions and limitations of the GPLv3, the permission for redistribution must be manually requested in advance. This ensures that neither the original software or any fork will be affected negatively by terms and conditions like the [Google Play Developer Distribution Agreement](https://play.google.com/about/developer-distribution-agreement.html). If you plan to redistribute this software, please contact the maintainer at [mysiaberes@gmail.com](mailto:diaguard.de@gmail.com).
 
 #### License
 
-    Copyright (C) 2013-2020 Philipp Fahlteich
+    Copyright (C) 2013-2020 Yahia Prt
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
