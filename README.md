@@ -1,4 +1,4 @@
-# Diaguard
+# MyDiabetes
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Release](https://img.shields.io/badge/Release-v1-478063.svg)](https://github.com/yahiaprt/MyDiabetes)
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
