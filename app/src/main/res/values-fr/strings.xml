@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="na1">Ne soyez pas paresseux</string>
+    <string name="na2">Ouvrez l\'application et entrez vos nouvelles activités.</string>
+
+    <string name="nb1">Votre santé est notre responsabilité</string>
+    <string name="nb2">Contrôler votre glycémie est notre travail.</string>
+    <!-- GENERAL -->
+    <string name="about">Sur</string>
+    <string name="active">active</string>
+    <string name="activity">Activité</string>
+    <string name="alarm">Mesure de la glycémie</string>
+    <string name="alarm_desc">%s depuis la dernière mesure</string>
+    <string name="alarm_desc_first">Y avez-vous déjà pensé?</string>
+    <string name="alarm_reminder">Mémoire</string>
+    <string name="alarm_reminder_none">Pas de mémoire</string>
+    <string name="amount">Quantité &#8230;</string>
+    <string name="average">Moyenne</string>
+    <string name="back">Arrière</string>
+    <string name="backup">Sauvegarde</string>
+    <string name="backup_import">Sauvegarde est charger &#8230;</string>
+    <string name="backup_store">Sauvegarde du magasin</string>
+    <string name="backup_title">Sélectionnez sauvegarde</string>
+    <string name="bloodsugar">Glycémie</string>
+    <string name="bolus">Bol</string>
+    <string name="bolus_no1">L\'administration d\'un bolus est déconseillée.</string>
+    <string name="bolus_no2">Cependant, il est recommandé de consommer des hydrates de carbone rapides, afin d\'éviter des niveaux de glycémie trop bas.</string>
+    <string name="calculator">Calculateur de bolus</string>
+    <string name="cancel">Avorter</string>
+    <string name="categories">Catégories</string>
+    <string name="category">Catégorie</string>
+    <string name="category_pin">Catégorie de broche</string>
+    <string name="category_pin_confirm">%s a été fixé</string>
+    <string name="category_unpin_confirm">%s a été détaché</string>
+    <string name="cleanup">Nettoyer</string>
+    <string name="cleanup_desc">Ceci va effacer toutes les entrées effectuées à la date sélectionnée et auparavant.</string>
+    <string name="contact">Contact</string>
+    <string name="correction_value">Facteur de correction</string>
+    <string name="data">Données</string>
+    <string name="date_select">DChoisissez une date</string>
+    <string name="day_next">Suivant jour</string>
+    <string name="day_previous">Jour précédent</string>
+    <string name="delete">Supprimer</string>
+    <string name="distribution">Distribution</string>
+    <string name="drawer_close">Fermer Navigator</string>
+    <string name="drawer_open">Ouvrir Navigator</string>
+    <string name="edit">Modifiez</string>
+    <string name="entry">Entrée</string>
+    <string name="entry_added">Ajout d\'une entrée</string>
+    <string name="entry_edit">Modifiez l\'entrée</string>
+    <string name="entry_count_per_day">Entrée par jour</string>
+    <string name="entry_delete">Supprimer l\'entrée</string>
+    <string name="entry_deleted">Entrée supprimée</string>
+    <string name="entry_new">Nouvelle entrée</string>
+    <string name="export">Exportation</string>
+    <string name="export_progress">PDF est créé</string>
+    <string name="export_stamp">Rapport généré sur</string>
+    <string name="first_visit">Nouveau ici?</string>
+    <string name="first_visit_desc">Ajouter la première valeur</string>
+    <string name="makla_add">Ajouter l\'aliment</string>
+    <string name="makla_add_desc">Ajouter l\'aliment</string>
+    <string name="format">Format</string>
+    <string name="general">Généralement</string>
+    <string name="hba1c">HbA1c</string>
+    <string name="home">Sommaire</string>
+    <string name="homepage">Site web</string>
+    <string name="hyper">Hyper</string>
+    <string name="hypo">Hypo</string>
+    <string name="imprint">Empreinte</string>
+    <string name="in">en</string>
+    <string name="insulin">Insuline</string>
+    <string name="latest">Il ya [value] [unit]</string>
+    <string name="latest_moments">A l\'instant</string>
+    <string name="licenses">Developer : Yahia Prt</string>
+    <string name="log">Protocole</string>
+    <string name="mail">E-Mail</string>
+    <string name="meal">Repas</string>
+    <string name="meal_optional">Repas (Optionnel)</string>
+    <string name="measurement_add">Ajouter une mesure</string>
+    <string name="measurements">Mesures</string>
+    <string name="no_data">Pas d\'entrées à imprimer</string>
+    <string name="note">Remarque</string>
+    <string name="notes">Remarques</string>
+    <string name="note_append">Ajouter des remarques</string>
+    <string name="ok">OK</string>
+    <string name="overview">Aperçu</string>
+    <string name="pulse">Impulsion</string>
+    <string name="remove_placeholder">Enlever %s</string>
+    <string name="settings">Généraux</string>
+    <string name="sound">Tones</string>
+    <string name="startscreen">Page d\'accueil</string>
+    <string name="statistics">Statistiques</string>
+    <string name="store_values">Entrez</string>
+    <string name="timeline">Journal</string>
+    <string name="to">et</string>
+    <string name="today">Aujourd\'hui</string>
+    <string name="trend">Tendance</string>
+    <string name="undo">Annuler</string>
+    <string name="units">Unités</string>
+    <string name="weight">Poids</string>
+    <string name="version">Version</string>
+    <string name="vibration">Vibration</string>
+    <string name="change_none">Constant</string>
+    <string name="change_every_six_hours">Cambia cada durante el día</string>
+    <string name="change_every_four_hours">Cambia cada cuatro horas</string>
+    <string name="change_every_second_hour">Cambia cada dos horas</string>
+    <string name="change_every_hour">Cambia cada hora</string>
+
+    <!-- DATE -->
+    <string name="calendarweek">Semaine</string>
+    <string name="dateend">Date de fin</string>
+    <string name="dateformat">Format de date</string>
+    <string name="datestart">Date de début</string>
+    <string name="minute">Minute</string>
+    <string name="minutes">Minutes</string>
+    <string name="hour">Heure</string>
+    <string name="hours">Heures</string>
+    <string name="day">Jour</string>
+    <string name="days">Jours</string>
+    <string name="week">Semaine</string>
+    <string name="month">Mois</string>
+
+    <string-array name="weekdays">
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+        <item>Samedi</item>
+        <item>Dimanche</item>
+    </string-array>
+    <string-array name="weekdays_short">
+        <item>Lu</item>
+        <item>Ma</item>
+        <item>Me</item>
+        <item>Je</item>
+        <item>Ve</item>
+        <item>Sa</item>
+        <item>Di</item>
+    </string-array>
+
+    <string name="morning">Le matin</string>
+    <string name="noon">Le midi</string>
+    <string name="evening">Le soir</string>
+    <string name="night">La nuit</string>
+    <string-array name="factor_names">
+        <item>Le matin</item>
+        <item>Le midi</item>
+        <item>Le soir</item>
+        <item>La nuit</item>
+    </string-array>
+
+    <string name="dateformat_default">DD.MM.YYYY</string>
+
+    <string name="insulin_units_default">Unités d\'insuline</string>
+    <string-array name="insulin_units">
+        <item>Unités d\'insuline</item>
+    </string-array>
+    <string-array name="insulin_units_acronyms">
+        <item>IU</item>
+    </string-array>
+
+    <string name="meal_units_default">Glucides</string>
+    <string-array name="meal_units">
+        <item>Glucides</item>
+        <item>Unités de glucides</item>
+        <item>Unités de pain</item>
+    </string-array>
+    <string-array name="meal_units_acronyms">
+        <item>Gluc</item>
+        <item>GU</item>
+        <item>PU</item>
+    </string-array>
+
+    <string name="activity_units_default">Minutes</string>
+    <string-array name="activity_units">
+        <item>Minutes</item>
+    </string-array>
+    <string-array name="activity_units_acronyms">
+        <item>min</item>
+    </string-array>
+
+    <string name="hba1c_units_default">mmol/mol</string>
+    <string-array name="hba1c_units">
+        <item>Pour cent</item>
+        <item>mmol/mol</item>
+    </string-array>
+
+    <string name="weight_units_default">Kilogrammes</string>
+    <string-array name="weight_units">
+        <item>Kilogrammes</item>
+        <item>Livres</item>
+    </string-array>
+    <string-array name="weight_units_acronyms">
+        <item>kg</item>
+        <item>lb</item>
+    </string-array>
+
+    <string name="pulse_units_default">Battements par minute</string>
+    <string-array name="pulse_units">
+        <item>Battements par minute</item>
+    </string-array>
+    <string-array name="pulse_units_acronyms">
+        <item>bpm</item>
+    </string-array>
+
+    <string name="pressure_units_default">Millimètres de mercure</string>
+    <string-array name="pressure_units">
+        <item>Millimètres de mercure</item>
+    </string-array>
+    <string-array name="pressure_units_acronyms">
+        <item>mm Hg</item>
+    </string-array>
+
+    <!-- VALIDATORS -->
+    <string name="validator_value_number">Veuillez n\'entrer que des chiffres s.v.p.</string>
+    <string name="validator_value_infuture">La saisie d\'événements futurs n\'est pas possible</string>
+    <string name="validator_value_empty">Véuillez saisir une valeur s.v.p.</string>
+    <string name="validator_value_none">Votre saisie ne contient pas d\'événements</string>
+    <string name="validator_value_unrealistic">Cette valeur n\'est pas réaliste</string>
+    <string name="validator_value_empty_carbohydrates">Véuillez saisir des glucides</string>
+
+    <!-- ERRORS -->
+    <string name="error_no_mail">Aucune application pour envoyer des mails n\'a été trouvée</string>
+    <string name="error_no_app">Aucune application à ouvrir ce fichier n\'a été trouvée</string>
+    <string name="error_sd_card">Carte mémoire pas disponible</string>
+    <string name="error_no_backups">Aucune sauvegarde n\'a été trouvée sous</string>
+
+    <!-- SETTINGS -->
+    <string name="pref_therapy_targets">Les valeurs cibles</string>
+    <string name="pref_therapy_targets_target">Valeur cible</string>
+    <string name="pref_therapy_limits">Limites</string>
+    <string name="pref_therapy_targets_highlight">Mettre les limites?</string>
+    <string name="pref_therapy_targets_hyperclycemia">Limite d\'hyperglycémie</string>
+    <string name="pref_therapy_targets_hypoclycemia">Limite d\'hypoglycémie</string>
+
+    <!-- ABOUT -->
+    <string name="about_dev">Développeur</string>
+    <string name="about_dev_desc">Yahia Prt,\nM. Sc. of Informatics/Anasthesist Medical, Diabétiques de type 1</string>
+    <string name="about_financing">Financement</string>
+    <string name="about_financing_desc">Il n\'y a pas de support financier de la part d\'organisations soit commercielles ou non-commercielles. Cette application est financée uniquement par son développeur.</string>
+    <string name="about_advertisement">Politique publicitaire</string>
+    <string name="about_advertisement_desc">Diaguard est, et restera, complètement libre de publicité.</string>
+    <string name="about_health">Sources</string>
+    <string name="about_health_desc">Toutes indications sanitaires sont basées sur des conseils de diabètologues allemands reconnus.</string>
+    <string name="about_privacy">Confidentialité</string>
+    <string name="about_privacy_desc">Nous prenons très au sérieux la protection de vous données personnelles. Nous n\'allons pas les traiter de n\'importe quelle manière ni les transmettre à des tièrs.</string>
+    <string name="about_code">Code d\'honneur</string>
+    <string name="about_code_desc">L\'application répond à tous les critères de qualité de base de code HealthOn App de déontologie des informations de santé digne de confiance.</string>
+    <string name="about_legal">Légal</string>
+    <string name="about_legal_desc">Le fabricant de l\'application n\'assume aucune responsabilité pour l\'actualité, l\'exactitude, l\'exhaustivité ou la qualité des informations fournies. Les actions en responsabilité à l\'encontre du fabricant, qui ont trait à la nature matérielle ou immatérielle, causées par l\'utilisation ou non de l\'application, sont exclues. Cette application est uniquement à des fins de documentation et ne remplace pas un consultant en diabète ou un médecin.</string>
+
+    <string name="all">Tous</string>
+    <string name="backup_complete">Sauvegarde terminée</string>
+    <string name="correction">Correction</string>
+    <string name="diastolic">Diastolique</string>
+    <string name="error_unexpected">Quelque chose a mal tourné</string>
+    <string name="error_import">Format de fichier invalide</string>
+    <string name="export_complete">Sauvé sous %s</string>
+    <string name="import_">Restaurer la sauvegarde</string>
+    <string name="interval">Intervalle</string>
+    <string name="measurement_latest">Dernier</string>
+    <string name="systolic">Systolique</string>
+    <string name="validator_value_empty_list"> Au moins une catégorie doit être sélectionnée</string>
+    <string name="pressure">Pression artérielle</string>
+    <string name="pressure_acronym">Pression art.</string>
+    <string name="hypo_per_day">Hypos par jour</string>
+    <string name="hyper_per_day">Hypers par jour</string>
+    <string name="per">par</string>
+    <string name="per_day">par jour</string>
+    <string name="target_area">Zone cible</string>
+    <string name="year">An</string>
+    <string name="alarm_delete">Retirer la mémoire</string>
+    <string name="alarm_deleted">Retiré la mémoire</string>
+    <string name="alarm_reminder_in">Mémoire pour</string>
+    <string name="hba1c_estimated">HbA1c estimée</string>
+    <string name="months">Mois</string>
+    <string name="brand">Marque</string>
+    <string name="entries">Entrées</string>
+    <string name="error_no_connection">Pas de connection?</string>
+    <string name="error_no_connection_desc">Aller en ligne pour obtenir plus d\'informations</string>
+    <string name="error_no_data">Rien trouvé</string>
+    <string name="error_no_data_desc">Essayez une autre requête pour améliorer vos résultats ou</string>
+    <string name="makla">Aliment</string>
+    <string name="makla_common">Alimentation commune</string>
+    <string name="makla_delete">Supprimer un aliment</string>
+    <string name="makla_deleted">Aliments supprimés</string>
+    <string name="makla_eaten_placeholder">%d repas pris seront affectés</string>
+    <string name="makla_edit">Modifier les aliments</string>
+    <string name="makla_new">Nouvelle aliment</string>
+    <string name="makla_search">Recherche de aliments</string>
+    <string name="ingredients">Ingrédients</string>
+    <string name="name">Nom</string>
+    <string name="nutriments">Nutriments</string>
+    <string name="nutriments_per_100g">Nutriments par 100 g</string>
+    <string name="proteins">Protéines</string>
+    <string name="salt">Sel</string>
+    <string name="sodium">Sodium</string>
+    <string name="sugar">Sucre</string>
+    <string name="try_again">Réessayer</string>
+    <string name="carbohydrates">Glucides</string>
+    <string name="energy">Calories</string>
+    <string name="fat">Graisse</string>
+    <string name="fat_saturated">Graisses saturées</string>
+    <string name="fiber">Fibra</string>
+    <string name="carbohydrates_per_100g">Glucides par 100 g</string>
+
+    <string name="style">Style</string>
+    <string name="chart_scatter">Nuage de points</string>
+    <string name="chart_line">Nuage de linéaire</string>
+
+    <string name="oxygen_saturation">Saturation en oxygène</string>
+    <string name="oxygen_saturation_acronym">Sat. en oxygène</string>
+    <string name="correction_value_desc">Réduction de la glycémie d\'une</string>
+
+    <string name="changelog">Quoi de neuf</string>
+    <string name="changelog_desc">
+        <b>Exporter des styles</b>\nLes fichiers PDF peuvent désormais être exportés dans trois styles différents: sous tableau, journal ou protocole.\n\n
+        <b>Exporter la configuration</b>\nL\'en-tête et le pied de page de l\'exportation PDF peuvent maintenant être désactivés. De plus, il existe d\'autres options pour adapter l\'exportation PDF à vos propres besoins.\n\n
+        <b>Exportations précédentes</b>\nCette liste fournit un aperçu des exportations PDF ou CSV précédentes.
+    </string>
+
+    <string name="meal_factor">Repas-bol-facteur</string>
+    <string name="meal_factors">Repas-bol-facteurs</string>
+    <string name="meal_factor_desc">Utilisé pour calculer la quantité d\'insuline pour un repas</string>
+    <string name="unit_factor_carbohydrates_unit">GU facteur</string>
+    <string name="unit_factor_bread_unit">PU facteur</string>
+    <string name="search">Recherche</string>
+    <string name="tag">Mot-clé</string>
+    <string name="tags">Mot-clés</string>
+    <string name="tags_append">Ajouter des mot-clés</string>
+
+    <string name="no_results_found">Aucun résultat trouvé</string>
+    <string name="search_hint">Notes, catégories, …</string>
+    <string name="tag_delete">Supprimer la mot-clé</string>
+    <string name="tag_delete_confirmation">%d entrées perdent cette mot-clé</string>
+    <string name="tag_new">Nouvelle mot-clé</string>
+    <string name="tag_duplicate">Le mot-clé est déjà disponible</string>
+    <string name="makla_append">Ajouter l\'aliment</string>
+    <string name="available_placeholder">%d disponible</string>
+    <string name="backup_desc">Sauvegarder les données dans un fichier de sauvegarde n\'importe où (Aucune donnée n\'est automatiquement transmise à des services externes)</string>
+    <string name="import_desc">Restaurer les données d\'un fichier de sauvegarde créé précédemment</string>
+    <string name="show_branded_makla">Afficher les aliments de marque</string>
+    <string name="show_branded_makla_desc">Inclut des milliers de produits emballés et peut donc contenir des doublons (par exemple, un produit de différents fabricants)</string>
+    <string name="search_prompt">Commencez la recherche en tapant</string>
+    <string name="pinned">fixé</string>
+    <string name="change_now">Changer maintenant</string>
+    <string name="help">Aider</string>
+    <string name="category_preference_desc">Active:\nLa catégorie est affichée ou masquée\n\nFixé:\nLa catégorie est automatiquement présélectionnée pour les nouvelles entrées\n\nTrier:\n Maintenez le symbole en six points et faites glisser le curseur vers le haut ou le bas</string>
+    <string name="insulin_split">Divisé en bolus, correction et basal</string>
+    <string name="highlight_limits">Mettre les limites</string>
+
+    <string name="theme">Thème de couleur</string>
+    <string name="theme_light">Lumière</string>
+    <string name="theme_dark">Sombre</string>
+    <string name="theme_time_based">Par heure de la journée</string>
+    <string name="theme_system">Paramètres du système</string>
+    <string name="table">Tableau</string>
+    <string name="export_append_header">Ajouter un en-tête\n(montrant la semaine civile)</string>
+    <string name="export_append_footer">Ajouter le pied de page\n(indiquant la date d\'exportation)</string>
+    <string name="export_history">Exportations passées</string>
+    <string name="share">Partager</string>
+    <string name="open">Ouvert</string>
+    <string name="export_delete">Supprimer l\'exportation</string>
+    <string name="export_delete_desc">Cela supprimera le fichier irrévocablement de votre appareil</string>
+    <string name="export_share">Partager l\'exportation</string>
+    <string name="actions">Actions</string>
+    <string name="export_open">Ouvrez l\'exportation</string>
+    <string name="week_current">Semaine en cours</string>
+    <string name="weeks_two">Deux dernières semaines</string>
+    <string name="weeks_four">Quatre dernières semaines</string>
+    <string name="month_current">Mois en cours</string>
+    <string name="quarter_current">Trimestre en cours</string>
+
+</resources>

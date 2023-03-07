@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MyDiabetes.iml" filepath="$PROJECT_DIR$/.idea/modules/MyDiabetes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyDiabetes.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pdfjet/MyDiabetes.pdfjet.iml" filepath="$PROJECT_DIR$/.idea/modules/pdfjet/MyDiabetes.pdfjet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pdfjet/MyDiabetes.pdfjet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/pdfjet/MyDiabetes.pdfjet.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pdfjet/MyDiabetes.pdfjet.test.iml" filepath="$PROJECT_DIR$/.idea/modules/pdfjet/MyDiabetes.pdfjet.test.iml" />
+    </modules>
+  </component>
+</project>

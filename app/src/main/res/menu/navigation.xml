@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/fragments"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/overview" />
+        <item
+            android:id="@+id/nav_timeline"
+            android:icon="@drawable/ic_day"
+            android:title="@string/timeline" />
+        <item
+            android:id="@+id/nav_log"
+            android:icon="@drawable/ic_log"
+            android:title="@string/log" />
+    </group>
+
+    <group
+        android:id="@+id/activities">
+        <item
+            android:id="@+id/nav_calculator"
+            android:icon="@drawable/ic_category_pulse"
+
+            android:title="@string/calculator" />
+        <item
+            android:id="@+id/nav_makla_database"
+            android:icon="@drawable/ic_category_meal"
+
+            android:title="@string/makla" />
+        <item
+            android:id="@+id/nav_statistics"
+            android:icon="@drawable/ic_category_hba1c"
+
+            android:title="@string/statistics" />
+        <item
+            android:id="@+id/nav_export"
+            android:icon="@drawable/ic_category_pressure"
+
+            android:title="@string/export" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+
+            android:title="@string/settings" />
+    </group>
+
+</menu>
