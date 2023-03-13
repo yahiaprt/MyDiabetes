@@ -83,7 +83,7 @@
     <string name="export_progress">PDF is being created</string>
     <string name="export_stamp">Report generated on</string>
     <string name="facebook" translatable="false">Facebook</string>
-    <string name="first_visit">First visit?</string>
+    <string name="first_visit"></string>
     <string name="first_visit_desc">Enter your first value</string>
     <string name="makla">Food</string>
     <string name="makla_add">Add Food</string>
