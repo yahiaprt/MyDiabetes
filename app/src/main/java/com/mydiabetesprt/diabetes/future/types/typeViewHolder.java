@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.dragon.Dragongable;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;

@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoaderListener;

@@ -8,7 +8,7 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.datetemps.choisirladateFragment;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.datetemps.choisirladateFragment;
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
 import com.mydiabetesprt.diabetes.future.navigation.MainButton;
 import com.mydiabetesprt.diabetes.future.navigation.MainButtonProperties;

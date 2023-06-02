@@ -29,13 +29,13 @@ android {
 //    productFlavors {
 //        beta {
 //            dimension "version"
-//            applicationId "com.yahia.healthysiabires.beta"
+//            applicationId "com.mydiabetesprt.diabetes.beta"
 //            resValue 'string', 'package_name', applicationId
 //            buildConfigField "boolean", "isCalculatorEnabled", "false"
 //        }
 //        store {
 //            dimension "version"
-//            applicationId "com.yahia.healthysiabires"
+//            applicationId "com.mydiabetesprt.diabetes"
 //            resValue 'string', 'package_name', applicationId
 //            buildConfigField "boolean", "isCalculatorEnabled", "false"
 //        }

@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.yahia.healthysiabires.R;import org.joda.time.DateTime;
+import com.mydiabetesprt.diabetes.R;import org.joda.time.DateTime;
 
 public class choisirladateFragment extends DialogFragment {
 

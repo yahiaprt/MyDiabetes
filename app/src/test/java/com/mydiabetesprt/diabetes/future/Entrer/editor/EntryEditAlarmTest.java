@@ -9,7 +9,7 @@ import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.codetroopers.betterpickers.numberpicker.NumberPicker;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.test.junit.rule.CleanUpData;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.test.junit.rule.CleanUpData;
 
 import org.hamcrest.Matchers;
 import org.junit.Before;

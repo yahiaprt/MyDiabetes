@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.future.preference;
 import android.app.Fragment;
 import android.os.Bundle;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.view.activity.BaseActivity;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.view.activity.BaseActivity;
 
 public class PreferenceActivity extends BaseActivity {
 

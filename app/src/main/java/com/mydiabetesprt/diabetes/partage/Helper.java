@@ -7,7 +7,7 @@ import android.util.Log;
 import androidx.annotation.DimenRes;
 
 import com.mydiabetesprt.diabetes.healthysiabiresApplication;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryDao;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.mesorationydk;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;

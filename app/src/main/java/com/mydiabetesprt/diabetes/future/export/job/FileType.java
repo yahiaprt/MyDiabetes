@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.future.export.job;
 import androidx.annotation.ColorRes;
 import androidx.annotation.Nullable;
 
-import com.yahia.healthysiabires.R;import java.io.File;
+import com.mydiabetesprt.diabetes.R;import java.io.File;
 
 public enum FileType {
     PDF(FileType.MIME_TYPE_PDF, "pdf", R.color.red_dark),

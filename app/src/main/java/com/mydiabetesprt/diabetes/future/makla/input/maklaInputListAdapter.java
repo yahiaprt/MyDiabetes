@@ -9,7 +9,7 @@ import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.adapter.BaseAdapter;
 
 /**

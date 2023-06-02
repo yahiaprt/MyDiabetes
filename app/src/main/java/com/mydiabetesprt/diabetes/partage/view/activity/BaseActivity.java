@@ -23,7 +23,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.event.ets;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.event.ets;
 import com.mydiabetesprt.diabetes.partage.event.fichier.fichierProvidedEt;
 import com.mydiabetesprt.diabetes.partage.event.fichier.fichierProvidedFailedEt;
 import com.mydiabetesprt.diabetes.partage.event.permision.PermisionRequestEt;

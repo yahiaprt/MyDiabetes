@@ -9,7 +9,7 @@ import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.mydiabetesprt.diabetes.test.junit.rule.CleanUpData;
-import com.yahia.healthysiabires.R;import org.junit.Before;
+import com.mydiabetesprt.diabetes.R;import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestRule;

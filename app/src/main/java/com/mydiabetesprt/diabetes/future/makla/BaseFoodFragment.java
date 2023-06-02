@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.view.fragment.BaseFragment;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.view.fragment.BaseFragment;
 
 
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.maklaydk;

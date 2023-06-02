@@ -4,7 +4,7 @@ import android.view.View;
 
 import androidx.annotation.DrawableRes;
 
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 public class MainButtonProperties {
 
     @DrawableRes

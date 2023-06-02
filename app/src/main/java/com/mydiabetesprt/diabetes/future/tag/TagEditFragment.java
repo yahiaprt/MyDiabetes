@@ -5,7 +5,7 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoaderListener;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.Tagydk;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Tag;

@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.core.content.ContextCompat;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.export.job.pdf.print.Pdf;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.export.job.pdf.print.Pdf;
 import com.mydiabetesprt.diabetes.future.export.job.pdf.print.PdfPage;
 import com.pdfjet.CoreFont;
 import com.pdfjet.Font;

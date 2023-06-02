@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 
 import androidx.core.content.ContextCompat;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.view.floatingactionbutton.FloatingActionButtonusin;
 import com.mydiabetesprt.diabetes.partage.view.resource.ColorUs;

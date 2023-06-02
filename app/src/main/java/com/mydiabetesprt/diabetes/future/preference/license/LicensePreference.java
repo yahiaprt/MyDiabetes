@@ -4,7 +4,7 @@ import android.content.Context;
 import android.preference.Preference;
 import android.util.AttributeSet;
 
-import com.yahia.healthysiabires.R;/**
+import com.mydiabetesprt.diabetes.R;/**
  * Created by Filip on 04.11.13.
  */
 public class LicensePreference extends Preference {

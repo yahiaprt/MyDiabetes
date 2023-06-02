@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.future.makla.detail.history;
 import android.view.View;
 import android.widget.TextView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
 import com.mydiabetesprt.diabetes.partage.Helper;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;

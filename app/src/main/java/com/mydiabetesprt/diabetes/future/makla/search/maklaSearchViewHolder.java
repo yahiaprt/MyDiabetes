@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.event.ets;
 import com.mydiabetesprt.diabetes.partage.event.ui.FoodSelectedEvent;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;

@@ -2,7 +2,7 @@ package com.mydiabetesprt.diabetes.future.preference.license;
 
 import android.content.Context;
 
-import com.yahia.healthysiabires.R;import de.psdev.licensesdialog.licenses.License;
+import com.mydiabetesprt.diabetes.R;import de.psdev.licensesdialog.licenses.License;
 
 /**
  * Created by Faltenreich on 25.11.2016.

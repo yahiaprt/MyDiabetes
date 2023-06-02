@@ -13,7 +13,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.TaskStackBuilder;
 
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 
 import org.joda.time.DateTimeConstants;

@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yahia.healthysiabires.R;import org.joda.time.DateTime;
+import com.mydiabetesprt.diabetes.R;import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 
 import butterknife.BindView;

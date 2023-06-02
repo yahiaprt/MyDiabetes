@@ -6,7 +6,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.adapter.BaseAdapter;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.adapter.BaseAdapter;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
 
 /**

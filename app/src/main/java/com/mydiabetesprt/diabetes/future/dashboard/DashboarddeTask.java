@@ -2,7 +2,7 @@ package com.mydiabetesprt.diabetes.future.dashboard;
 
 import android.content.Context;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;

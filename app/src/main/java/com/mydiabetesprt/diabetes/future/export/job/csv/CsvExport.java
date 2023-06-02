@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.future.export.job.csv;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.DatabaseHelper;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.DatabaseHelper;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryDao;

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Tag;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Tag;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.adapter.EndAdapter;
 import com.mydiabetesprt.diabetes.future.log.entry.LogEntryListItem;
 

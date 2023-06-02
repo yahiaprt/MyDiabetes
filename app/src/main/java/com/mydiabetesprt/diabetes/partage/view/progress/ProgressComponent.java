@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.partage.view.progress;
 import android.app.ProgressDialog;
 import android.content.Context;
 
-import com.yahia.healthysiabires.R;public class ProgressComponent {
+import com.mydiabetesprt.diabetes.R;public class ProgressComponent {
 
     private ProgressDialog progressDialog;
 

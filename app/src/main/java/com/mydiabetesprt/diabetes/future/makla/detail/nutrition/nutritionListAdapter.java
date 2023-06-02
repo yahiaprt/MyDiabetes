@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.adapter.BaseAdapter;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.adapter.BaseAdapter;
 
 class nutritionListAdapter extends BaseAdapter<nutritionListItem, nutritionViewHolder> {
 

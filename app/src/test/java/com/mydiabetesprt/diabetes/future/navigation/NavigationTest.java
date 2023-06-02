@@ -12,7 +12,7 @@ import androidx.test.espresso.contrib.NavigationViewActions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
 import com.mydiabetesprt.diabetes.future.Entrer.search.EntrerSearchActivity;
 import com.mydiabetesprt.diabetes.test.junit.rule.CleanUpData;
 

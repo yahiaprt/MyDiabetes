@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.ColorInt;
 
-import com.yahia.healthysiabires.R;import com.github.mikephil.charting.charts.ScatterChart;
+import com.mydiabetesprt.diabetes.R;import com.github.mikephil.charting.charts.ScatterChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.ScatterDataSet;
 

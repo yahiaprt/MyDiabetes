@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;

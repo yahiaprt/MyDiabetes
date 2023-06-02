@@ -6,7 +6,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.LayoutRes;
 
-import com.yahia.healthysiabires.R;import com.lapism.searchview.SearchView;
+import com.mydiabetesprt.diabetes.R;import com.lapism.searchview.SearchView;
 
 import java.util.List;
 

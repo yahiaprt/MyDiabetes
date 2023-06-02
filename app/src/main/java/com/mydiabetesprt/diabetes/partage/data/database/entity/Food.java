@@ -7,7 +7,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
 import com.mydiabetesprt.diabetes.future.export.Backupable;
 import com.j256.ormlite.dao.ForeignCollection;

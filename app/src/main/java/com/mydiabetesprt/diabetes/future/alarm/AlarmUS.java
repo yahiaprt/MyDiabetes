@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 
 import com.mydiabetesprt.diabetes.healthysiabiresApplication;
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryDao;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.glycemie;

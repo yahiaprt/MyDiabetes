@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.ads.InterstitialAd;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoaderListener;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryDao;

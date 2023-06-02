@@ -6,7 +6,7 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
 import com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput;
 

@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.partage.data.database.entity;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 public enum type {
 
     BLOODSUGAR(glycemie.class, 1, R.string.bloodsugar, R.drawable.ic_category_bloodsugar, R.drawable.ic_showcase_bloodsugar),

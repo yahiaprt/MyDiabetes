@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;
 
 import org.joda.time.DateTime;

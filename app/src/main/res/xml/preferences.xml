@@ -38,10 +38,10 @@
             android:key="categories"
             android:title="@string/categories">
             <intent
-                android:targetPackage="com.yahia.healthysiabires"
+                android:targetPackage="com.mydiabetesprt.diabetes"
 
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.yahia.healthysiabires.future.types.typeListActivity"/>
+                android:targetClass="com.mydiabetesprt.diabetes.future.types.typeListActivity"/>
         </Preference>
 
         <Preference
@@ -49,8 +49,8 @@
             android:title="@string/tags">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetPackage="com.yahia.healthysiabires"
-                android:targetClass="com.yahia.healthysiabires.future.tag.TagListActivity"/>
+                android:targetPackage="com.mydiabetesprt.diabetes"
+                android:targetClass="com.mydiabetesprt.diabetes.future.tag.TagListActivity"/>
         </Preference>
 
         <com.mydiabetesprt.diabetes.future.preference.restoration.restorationExportPreference

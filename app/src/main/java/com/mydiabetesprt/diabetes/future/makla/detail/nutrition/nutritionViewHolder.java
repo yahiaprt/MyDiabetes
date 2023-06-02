@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.future.makla.detail.nutrition;
 import android.view.View;
 import android.widget.TextView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;
 
 import butterknife.BindView;
 

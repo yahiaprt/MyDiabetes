@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.export.ExportFragment;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.export.ExportFragment;
 import com.mydiabetesprt.diabetes.future.navigation.MainActivity;
 
 public class changerlelogdefragment extends DialogFragment {

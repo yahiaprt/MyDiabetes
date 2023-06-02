@@ -7,15 +7,15 @@
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
 
--keep class yahia.healthysiabires.partage.data.database.entity.**
+-keep class mydiabetesprt.diabetes.partage.data.database.entity.**
 
--keepclassmembers class yahia.healthysiabires.partage.data.database.entity.** { *; }
--keep enum yahia.healthysiabires.partage.data.database.entity.**
+-keepclassmembers class mydiabetesprt.diabetes.partage.data.database.entity.** { *; }
+-keep enum mydiabetesprt.diabetes.partage.data.database.entity.**
 
--keepclassmembers enum yahia.healthysiabires.partage.data.database.entity.** { *; }
--keep interface yahia.healthysiabires.partage.data.database.entity.**
+-keepclassmembers enum mydiabetesprt.diabetes.partage.data.database.entity.** { *; }
+-keep interface mydiabetesprt.diabetes.partage.data.database.entity.**
 
--keepclassmembers interface yahia.healthysiabires.partage.data.database.entity.** { *; }
+-keepclassmembers interface mydiabetesprt.diabetes.partage.data.database.entity.** { *; }
 
 ##---------------Begin: EventBus ----------
 -keepattributes *Annotation*

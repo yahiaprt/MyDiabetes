@@ -2,7 +2,7 @@ package com.mydiabetesprt.diabetes.future.Entrer.editor.measuration;
 
 import android.content.Context;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.makla.input.maklaInputView;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.makla.input.maklaInputView;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Meal;

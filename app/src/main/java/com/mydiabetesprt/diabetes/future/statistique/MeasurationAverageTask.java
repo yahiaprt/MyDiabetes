@@ -6,7 +6,7 @@ import android.util.Log;
 
 import androidx.core.content.ContextCompat;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.mesoration;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.mesoration;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.mesorationydk;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;

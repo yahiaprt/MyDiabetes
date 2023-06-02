@@ -4,7 +4,7 @@ import android.content.Context;
 import android.preference.DialogPreference;
 import android.util.AttributeSet;
 
-import com.yahia.healthysiabires.R;public class AboutPreference extends DialogPreference {
+import com.mydiabetesprt.diabetes.R;public class AboutPreference extends DialogPreference {
 
     public AboutPreference(Context context, AttributeSet attrs) {
         super(context, attrs);

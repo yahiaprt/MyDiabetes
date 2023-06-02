@@ -5,7 +5,7 @@ import androidx.test.espresso.action.ViewActions;
 import androidx.test.espresso.matcher.RootMatchers;
 import androidx.test.espresso.matcher.ViewMatchers;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.export.job.FileType;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.export.job.FileType;
 
 class ExportTestUtils {
 

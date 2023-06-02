@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.future.tag;
 import android.view.View;
 import android.widget.TextView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoaderListener;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryTagDao;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Tag;

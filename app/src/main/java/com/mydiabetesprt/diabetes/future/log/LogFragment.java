@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.ads.InterstitialAd;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryDao;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.EntryTag;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;

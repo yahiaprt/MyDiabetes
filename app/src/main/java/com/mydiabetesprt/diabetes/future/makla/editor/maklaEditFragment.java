@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.InterstitialAd;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.ydk.maklaydk;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.ydk.maklaydk;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.event.ets;
 import com.mydiabetesprt.diabetes.partage.event.data.maklaSavedEt;

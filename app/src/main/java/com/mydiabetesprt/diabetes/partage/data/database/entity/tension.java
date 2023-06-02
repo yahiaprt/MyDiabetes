@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.partage.data.database.entity;
 import androidx.annotation.NonNull;
 
 import com.mydiabetesprt.diabetes.healthysiabiresApplication;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 

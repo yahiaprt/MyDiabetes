@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.InterstitialAd;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.event.data.EntreAddedEt;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.event.data.EntreAddedEt;
 import com.mydiabetesprt.diabetes.partage.event.data.EntreDeletedEt;
 import com.mydiabetesprt.diabetes.partage.event.data.EntreUpdatedEt;
 import com.mydiabetesprt.diabetes.partage.event.fichier.restorationImportedEt;

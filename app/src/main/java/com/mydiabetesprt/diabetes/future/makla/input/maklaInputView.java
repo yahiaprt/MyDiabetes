@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.j256.ormlite.dao.ForeignCollection;
 import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.makla.search.maklaSearchActivity;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.makla.search.maklaSearchActivity;
 import com.mydiabetesprt.diabetes.future.makla.search.maklaSearchFragment;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;

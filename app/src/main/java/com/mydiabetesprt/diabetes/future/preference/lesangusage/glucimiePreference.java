@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.event.ets;
 import com.mydiabetesprt.diabetes.partage.event.preference.glycemiePreferenceChangedEt;
@@ -24,7 +24,7 @@ import com.mydiabetesprt.diabetes.partage.view.texteditor.LocalisedNumeroEditTex
  */
 public class glucimiePreference extends EditTextPreference {
 
-    private Context context;
+    private final Context context;
     private SharedPreferences sharedPreferences;
 
     private LocalisedNumeroEditText editTextValue;
@@ -60,7 +60,7 @@ public class glucimiePreference extends EditTextPreference {
         super.showDialog(state);
 
         final AlertDialog alertDialog = (AlertDialog)getDialog();
-        if(alertDialog == null || alertDialog.getButton(AlertDialog.BUTTON_POSITIVE) == null)
+        if(alertDialog == null)
             throw new Resources.NotFoundException();
 
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener()

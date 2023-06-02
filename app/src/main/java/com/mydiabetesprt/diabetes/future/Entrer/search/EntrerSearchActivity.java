@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Tag;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Tag;
 import com.mydiabetesprt.diabetes.partage.view.activity.BaseActivity;
 import com.mydiabetesprt.diabetes.partage.view.activity.BaseSearchActivity;
 

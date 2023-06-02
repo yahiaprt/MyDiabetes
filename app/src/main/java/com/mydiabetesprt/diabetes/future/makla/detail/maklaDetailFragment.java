@@ -11,7 +11,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.tabs.TabLayout;
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 import com.mydiabetesprt.diabetes.future.makla.BaseFoodFragment;
 import com.mydiabetesprt.diabetes.future.makla.editor.maklaEditActivity;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;

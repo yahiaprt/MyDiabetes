@@ -5,7 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.BaseServerEntite;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.BaseServerEntite;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
 import com.mydiabetesprt.diabetes.future.makla.networkage.ydk.Productydk;
@@ -170,8 +170,12 @@ public class maklaydk extends BaseServerydk<Food> {
 
     @Nullable
     private Food parseFromydk(Productydk ydk) {
-        if (!ydk.identifier.isJsonPrimitive()) {
+        if (ydk == null || ydk.identifier == null) {
             return null;
+        } else {
+            if (!ydk.identifier.isJsonPrimitive()) {
+                return null;
+            }
         }
         String serverId = ydk.identifier.getAsJsonPrimitive().getAsString();
         if (StringUs.isBlank(serverId)) {

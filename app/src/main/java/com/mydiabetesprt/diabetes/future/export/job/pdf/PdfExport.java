@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.export.job.Export;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.export.job.Export;
 import com.mydiabetesprt.diabetes.future.export.job.ExportCallback;
 import com.mydiabetesprt.diabetes.future.export.job.FileType;
 import com.mydiabetesprt.diabetes.future.export.job.pdf.meta.PdfExportCache;

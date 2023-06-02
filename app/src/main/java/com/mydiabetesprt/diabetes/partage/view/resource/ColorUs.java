@@ -8,7 +8,7 @@ import androidx.annotation.AttrRes;
 import androidx.annotation.ColorInt;
 import androidx.core.content.ContextCompat;
 
-import com.yahia.healthysiabires.R;public class ColorUs {
+import com.mydiabetesprt.diabetes.R;public class ColorUs {
 
     @ColorInt
     private static int getColor(Context context, @AttrRes int attrRes) {

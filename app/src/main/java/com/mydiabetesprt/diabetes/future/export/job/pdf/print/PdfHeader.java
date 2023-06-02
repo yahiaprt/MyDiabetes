@@ -2,7 +2,7 @@ package com.mydiabetesprt.diabetes.future.export.job.pdf.print;
 
 import android.util.Log;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.export.job.pdf.meta.PdfExportCache;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.export.job.pdf.meta.PdfExportCache;
 import com.mydiabetesprt.diabetes.future.export.job.pdf.view.SizedText;
 import com.pdfjet.Paragraph;
 import com.pdfjet.Point;

@@ -13,7 +13,7 @@ import android.util.Log;
 import androidx.core.app.NotificationCompat;
 
 import com.mydiabetesprt.diabetes.future.navigation.MainActivity;
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

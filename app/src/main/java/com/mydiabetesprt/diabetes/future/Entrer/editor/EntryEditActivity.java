@@ -20,7 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.Helper;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.Helper;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;

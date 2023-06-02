@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.StringRes;
 
-import com.yahia.healthysiabires.R;import org.joda.time.DateTime;
+import com.mydiabetesprt.diabetes.R;import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 import org.joda.time.Interval;
 

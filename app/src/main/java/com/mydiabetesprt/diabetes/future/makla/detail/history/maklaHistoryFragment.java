@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.ads.InterstitialAd;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.makla.BaseFoodFragment;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.makla.BaseFoodFragment;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.FoodEatenydk;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;

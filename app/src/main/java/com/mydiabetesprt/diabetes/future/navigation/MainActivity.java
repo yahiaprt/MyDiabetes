@@ -24,7 +24,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.mydiabetesprt.diabetes.NotificationServiceprt;
 import com.mydiabetesprt.diabetes.NotificationServiceprt2;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.future.timeline.tempslineFragment;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.timeline.tempslineFragment;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.future.dashboard.DashboarddeFragment;
 import com.mydiabetesprt.diabetes.future.Entrer.search.EntrerSearchActivity;

@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.yahia.healthysiabires.R; import com.mydiabetesprt.diabetes.partage.view.ViewUs;
+import com.mydiabetesprt.diabetes.R; import com.mydiabetesprt.diabetes.partage.view.ViewUs;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

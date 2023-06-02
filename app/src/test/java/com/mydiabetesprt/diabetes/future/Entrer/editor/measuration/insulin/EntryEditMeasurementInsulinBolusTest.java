@@ -11,7 +11,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.test.espresso.matcher.EditTextMatcher;
 import com.mydiabetesprt.diabetes.test.junit.rule.CleanUpData;

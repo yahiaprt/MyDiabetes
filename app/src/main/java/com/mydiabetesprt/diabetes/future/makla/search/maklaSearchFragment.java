@@ -18,7 +18,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.lapism.searchview.SearchAdapter;
 import com.lapism.searchview.SearchItem;
 import com.lapism.searchview.SearchView;
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 import com.mydiabetesprt.diabetes.future.makla.BaseFoodFragment;
 import com.mydiabetesprt.diabetes.future.makla.detail.maklaDetailActivity;
 import com.mydiabetesprt.diabetes.future.makla.editor.maklaEditActivity;
@@ -46,7 +46,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 
-import com.yahia.healthysiabires.R;
+import com.mydiabetesprt.diabetes.R;
 /**
  * Created by Faltenreich on 11.09.2016.
  */

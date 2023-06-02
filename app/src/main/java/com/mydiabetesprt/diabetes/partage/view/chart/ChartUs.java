@@ -6,7 +6,7 @@ import android.graphics.Color;
 import androidx.annotation.ColorRes;
 import androidx.core.content.ContextCompat;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
 import com.github.mikephil.charting.charts.BarLineChartBase;

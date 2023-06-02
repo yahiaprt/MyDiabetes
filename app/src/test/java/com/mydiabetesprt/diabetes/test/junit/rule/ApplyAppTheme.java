@@ -4,7 +4,7 @@ import android.content.Context;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import com.yahia.healthysiabires.R;public class ApplyAppTheme extends TestRule {
+import com.mydiabetesprt.diabetes.R;public class ApplyAppTheme extends TestRule {
 
     @Override
     public void applyBeforeTest() {

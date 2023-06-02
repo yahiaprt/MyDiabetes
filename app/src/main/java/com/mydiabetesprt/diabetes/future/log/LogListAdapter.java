@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
 import com.mydiabetesprt.diabetes.future.Entrer.search.EntrerSearchListAdapter;
 import com.mydiabetesprt.diabetes.future.log.jour.LogDayListItem;
 import com.mydiabetesprt.diabetes.future.log.jour.LogDayViewHolder;

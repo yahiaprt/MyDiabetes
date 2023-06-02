@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;
 
 import org.joda.time.DateTime;
 

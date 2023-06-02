@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.serilisations.typeSerialiser;
 import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
 import com.mydiabetesprt.diabetes.partage.view.theme.Theme;

@@ -3,7 +3,7 @@ package com.mydiabetesprt.diabetes.future.timeline.jour.tablo;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.view.image.ImageLoader;
 import com.mydiabetesprt.diabetes.partage.view.ViewUs;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;

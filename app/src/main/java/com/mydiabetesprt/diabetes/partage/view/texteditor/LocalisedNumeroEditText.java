@@ -11,7 +11,7 @@ import android.util.Log;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.premier.FloatUs;
 
 import java.text.DecimalFormatSymbols;
 

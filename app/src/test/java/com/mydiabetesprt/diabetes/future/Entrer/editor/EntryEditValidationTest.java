@@ -7,7 +7,7 @@ import androidx.test.espresso.assertion.ViewAssertions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.test.junit.rule.CleanUpData;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.test.junit.rule.CleanUpData;
 
 import org.junit.Assert;
 import org.junit.Before;

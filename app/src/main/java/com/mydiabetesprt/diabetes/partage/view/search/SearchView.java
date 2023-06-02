@@ -7,7 +7,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.yahia.healthysiabires.R;public class SearchView extends com.lapism.searchview.SearchView {
+import com.mydiabetesprt.diabetes.R;public class SearchView extends com.lapism.searchview.SearchView {
 
     // Workaround: Duplicated property from library, since it is package-private
     private static final float STATE_ARROW = 0.0f;

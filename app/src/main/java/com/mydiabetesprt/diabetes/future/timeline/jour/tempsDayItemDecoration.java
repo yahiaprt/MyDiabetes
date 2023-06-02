@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yahia.healthysiabires.R;class tempsDayItemDecoration extends RecyclerView.ItemDecoration {
+import com.mydiabetesprt.diabetes.R;class tempsDayItemDecoration extends RecyclerView.ItemDecoration {
 
     private Drawable divider;
 

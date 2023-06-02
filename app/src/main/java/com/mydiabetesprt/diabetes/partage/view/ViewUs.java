@@ -31,7 +31,7 @@ import androidx.core.content.ContextCompat;
 
 import com.codetroopers.betterpickers.numberpicker.NumberPickerBuilder;
 import com.codetroopers.betterpickers.numberpicker.NumberPickerDialogFragment;
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.data.premier.Victor2D;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.premier.Victor2D;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.math.BigDecimal;

@@ -2,7 +2,7 @@ package com.mydiabetesprt.diabetes.future.preference.usin;
 
 import androidx.annotation.StringRes;
 
-import com.yahia.healthysiabires.R;/**
+import com.mydiabetesprt.diabetes.R;/**
  * Created by Faltenreich on 06.09.2016.
  */
 public enum jourtime {

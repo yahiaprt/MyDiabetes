@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.yahia.healthysiabires.R;import com.mydiabetesprt.diabetes.partage.event.ets;
+import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.event.ets;
 import com.mydiabetesprt.diabetes.partage.event.fichier.ExportHistoireDeleteEt;
 import com.mydiabetesprt.diabetes.future.export.job.FileType;
 import com.mydiabetesprt.diabetes.partage.view.recyclerview.viewholder.BaseViewHolder;
