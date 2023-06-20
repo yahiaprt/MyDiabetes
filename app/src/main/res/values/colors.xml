@@ -28,13 +28,20 @@
     <color name="gray_semitransparent">#77d4d4d4</color>
 
     <color name="green">#42b17e</color>
-    <color name="green_light">#ff6d947f</color>
-    <color name="green_lighter">#ff79a18c</color>
+<!--    <color name="green_light">#ff6d947f</color>-->
+<!--    <color name="green_lighter">#ff79a18c</color>-->
+    <color name="green_light">#42b17e</color>
+    <color name="green_lighter">#42b17e</color>
+
     <color name="green_dark">#42b17e</color>
     <color name="green_darker">#42b17e</color>
-    <color name="green_darkest">#ff2E5340</color>
-    <color name="green_transparent">#CC478063</color>
-    <color name="green_dark_transparent">#CC41785a</color>
+<!--    <color name="green_darkest">#ff2E5340</color>-->
+<!--    <color name="green_transparent">#CC478063</color>-->
+<!--    <color name="green_dark_transparent">#CC41785a</color>-->
+    <color name="green_darkest">#42b17e</color>
+    <color name="green_transparent">#42b17e</color>
+    <color name="green_dark_transparent">#42b17e</color>
+
 
     <color name="red">#ffdd6050</color>
     <color name="red_light">#ffe96353</color>

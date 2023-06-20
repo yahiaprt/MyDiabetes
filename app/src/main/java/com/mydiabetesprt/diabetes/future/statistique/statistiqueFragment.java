@@ -13,7 +13,7 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.mesoration;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryDao;
@@ -44,9 +44,7 @@ import butterknife.BindView;
 
 public class statistiqueFragment extends BaseFragment {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     private static final int MIN_MAX_Y_VALUE = 3;
 
     @BindView(R.id.statistics_image_category) ImageView imageViewCategory;
@@ -117,15 +115,7 @@ public class statistiqueFragment extends BaseFragment {
         init();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     @Override
     public void onResume() {

@@ -9,12 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
 import com.mydiabetesprt.diabetes.R;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
@@ -49,10 +44,7 @@ import butterknife.OnClick;
 
 public class DashboarddeFragment extends BaseFragment implements MainButton {
     Boolean y = true;
-    private InterstitialAd mInterstitialAd;
-    private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+
 
     @BindView(R.id.layout_alarm)
     ViewGroup layoutAlarm;
@@ -86,83 +78,16 @@ public class DashboarddeFragment extends BaseFragment implements MainButton {
         super.onViewCreated(view, savedInstanceState);
 
 
-        MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-
-        mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                //  finish();
-            }
-
-        });
 
 
-        MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-
-        mInterstitialAd2 = new InterstitialAd(getContext());
-        mInterstitialAd2.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd2.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd2.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                //     finish();
-            }
-
-        });
 
 
-        MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-
-//
-        MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-
-        mInterstitialAd3 = new InterstitialAd(getContext());
-        mInterstitialAd3.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd3.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd3.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                //   finish();
-            }
-
-        });
 //
 //
 
         //initializeChart();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
 
 
     @Override
@@ -284,25 +209,10 @@ public class DashboarddeFragment extends BaseFragment implements MainButton {
 //        chart.getXAxis().setAxisMaximum(timeSpan.stepsPerInterval);
 //    }
 
-    public void showIntewrestial() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
-        }
-    }
-
-    public void showIntewrestial2() {
-        if (mInterstitialAd2.isLoaded()) {
-            mInterstitialAd2.show();
-        }
-    }
 
 
 //
-    public void showIntewrestial3() {
-        if (mInterstitialAd3.isLoaded()) {
-            mInterstitialAd3.show();
-        }
-    }
+
 //
 
 //    private void updateChart() {
@@ -359,18 +269,23 @@ public class DashboarddeFragment extends BaseFragment implements MainButton {
         }
     }
 
+    private void openLog() {
+        if (getActivity() instanceof MainActivity) {
+            ((MainActivity) getActivity()).showFragment(R.id.nav_log);
+            //  showIntewrestial3();
+        }
+    }
+
        @OnClick(R.id.layout_latest)
     protected void openEntry(View view) {
         EntryEditActivity.show(getContext(), latestEntry);
-        showIntewrestial();
-        showIntewrestial2();
+
 
     }
 
     @OnClick(R.id.layout_today)
     protected void openStatisticsToday() {
-        showIntewrestial();
-        showIntewrestial2();
+
         openStatistics();
 
     }
@@ -385,7 +300,6 @@ public class DashboarddeFragment extends BaseFragment implements MainButton {
                 getString(R.string.months),
                 getString(R.string.bloodsugar));
         ViewUs.showSnackbar(getView(), formula);
-        showIntewrestial();
 
     }
 
@@ -393,40 +307,41 @@ public class DashboarddeFragment extends BaseFragment implements MainButton {
     protected void settings() {
 
         openSettings();
-        showIntewrestial();
-        showIntewrestial2();
+
     }
 
     @OnClick(R.id.layout_calculation)
     protected void calculation() {
 
         openCalculator();
-        showIntewrestial();
-        showIntewrestial2();
+
     }
 
     @OnClick(R.id.layout_export)
     protected void export() {
 
         openExport();
-        showIntewrestial();
-        showIntewrestial2();
+
     }
+
 
     @OnClick(R.id.layout_timeline)
     protected void timeline() {
 
         openTimeline();
-        showIntewrestial();
-        showIntewrestial2();
-    }
 
+    }
+    @OnClick(R.id.layout_log)
+    protected void log() {
+
+        openLog();
+
+    }
     @OnClick(R.id.layout_food)
     protected void food() {
 
         openMeal();
-        showIntewrestial();
-        showIntewrestial2();
+
     }
 
     @Override

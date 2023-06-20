@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">MyDiabetes</string>
+    <string name="app_name" translatable="false">DiabetesBeeper</string>
     <string name="app_facebook" translatable="false">http://facebook.com/yahia.prt.31508</string>
     <string name="app_facebook_short" translatable="false">http://facebook.com/yahia.prt.31508</string>
     <string name="app_homepage" translatable="false">https://mydiabetes-prt.zyrosite.com/</string>

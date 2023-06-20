@@ -8,7 +8,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.ydk.maklaydk;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
 import com.mydiabetesprt.diabetes.partage.event.ets;
@@ -30,9 +30,7 @@ public class maklaEditFragment extends BaseFoodFragment {
     Boolean y=true;
 
     final maklaEditFragment context0=this;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
 
     @BindView(R.id.makla_edit_name)
     StickHintInput nameInput;
@@ -93,15 +91,7 @@ public class maklaEditFragment extends BaseFoodFragment {
         init();
     }
 
-    @Override
-    public void onBackPressed() {
 
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
 
     @Override
     public void onStart() {

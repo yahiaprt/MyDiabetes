@@ -1,8 +1,5 @@
 package com.mydiabetesprt.diabetes.future.navigation;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,9 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+
 import com.mydiabetesprt.diabetes.NotificationServiceprt;
 import com.mydiabetesprt.diabetes.NotificationServiceprt2;
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.timeline.tempslineFragment;
@@ -44,17 +39,13 @@ import com.google.android.material.navigation.NavigationView;
 
 import butterknife.BindView;
 
-import static com.mydiabetesprt.diabetes.healthysiabiresApplication.getContext;
 
 
 public class MainActivity extends BaseActivity implements OnFragmentChangeListener {
-    private AdView mAdView;
+        
 
     Boolean y = true;
-    private InterstitialAd mInterstitialAd;
-    private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
     @BindView(R.id.navigation_drawer)

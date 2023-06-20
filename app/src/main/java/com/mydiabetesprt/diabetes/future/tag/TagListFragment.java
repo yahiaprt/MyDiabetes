@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoaderListener;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryTagDao;
@@ -27,9 +27,7 @@ import butterknife.OnClick;
 public class TagListFragment extends BaseFragment implements TagListAdapter.TagListener {
 
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.list) RecyclerView list;
     @BindView(R.id.list_placeholder) View placeholder;
 
@@ -93,15 +91,7 @@ public class TagListFragment extends BaseFragment implements TagListAdapter.TagL
 
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     private void initLayout() {
         list.setLayoutManager(new LinearLayoutManager(getContext()));

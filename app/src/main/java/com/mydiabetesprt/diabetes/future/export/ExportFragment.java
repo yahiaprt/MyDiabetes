@@ -19,7 +19,7 @@ import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.event.ets;
@@ -59,9 +59,7 @@ import butterknife.OnItemSelected;
 
 public class ExportFragment extends BaseFragment implements ExportCallback, MainButton {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     private static final String TAG = ExportFragment.class.getSimpleName();
 
     @BindView(R.id.scroll_view) NestedScrollView scrollView;
@@ -143,15 +141,7 @@ public class ExportFragment extends BaseFragment implements ExportCallback, Main
         initCategories();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     @Override
     public void onResume() {

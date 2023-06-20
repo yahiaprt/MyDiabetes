@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
+       
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.preference.PreferenceHelper;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.event.ets;
@@ -27,15 +27,13 @@ import butterknife.BindView;
 public class typeListFragment extends BaseFragment implements typeListAdapter.Listener {
 
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.listView) RecyclerView list;
 
     private typeListAdapter listAdapter;
     private ItemTouchHelper itemTouchHelper;
     private boolean hasChanged;
-    private AdView mAdView;
+        
 
     public typeListFragment() {
         super(R.layout.fragment_categories, R.string.categories, R.menu.categories);
@@ -57,15 +55,7 @@ public class typeListFragment extends BaseFragment implements typeListAdapter.Li
         setCategories();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
 
     @Override

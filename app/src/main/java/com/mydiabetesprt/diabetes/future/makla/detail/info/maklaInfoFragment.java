@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.makla.BaseFoodFragment;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.type;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.Food;
@@ -23,9 +23,7 @@ import butterknife.BindView;
 
 public class maklaInfoFragment extends BaseFoodFragment {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.makla_brand) TextView brand;
     @BindView(R.id.makla_ingredients) TextView ingredients;
     @BindView(R.id.makla_value) TextView value;
@@ -82,15 +80,7 @@ public class maklaInfoFragment extends BaseFoodFragment {
         setHasOptionsMenu(false);
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     @Override
     public void onResume() {

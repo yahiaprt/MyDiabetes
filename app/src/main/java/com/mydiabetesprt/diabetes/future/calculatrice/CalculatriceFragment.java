@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
@@ -43,15 +43,10 @@ import java.util.List;
 
 import butterknife.BindView;
 
-/**
- * Created by Faltenreich on 10.09.2016.
- */
 public class CalculatriceFragment extends BaseFragment implements MainButton {
 
 Boolean y=true;
-    private InterstitialAd mInterstitialAd5;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+
 
 
     @BindView(R.id.calculator_bloodsugar)
@@ -73,25 +68,7 @@ Boolean y=true;
 //
         }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
-
-
-    public  void showIntewrestial5() {
-        if (mInterstitialAd5.isLoaded()) {
-            mInterstitialAd5.show();
-        } else {
-            finish();
-        }
-
-    }
+  
 
 
 

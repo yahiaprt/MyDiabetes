@@ -87,9 +87,9 @@ public abstract class BaseFragment extends Fragment implements ToolbarBehavior {
         }
     }
 
-    public abstract void onBackPressed();
-
-    public abstract void onBackButtonPressed();
+//    public abstract void onBackPressed();
+//
+//    public abstract void onBackButtonPressed();
 
     @Override
     public void onResume() {

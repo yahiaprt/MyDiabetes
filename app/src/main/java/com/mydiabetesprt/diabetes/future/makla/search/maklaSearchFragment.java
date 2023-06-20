@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.lapism.searchview.SearchAdapter;
 import com.lapism.searchview.SearchItem;
 import com.lapism.searchview.SearchView;
@@ -53,9 +53,7 @@ import com.mydiabetesprt.diabetes.R;
 public
 class maklaSearchFragment extends BaseFragment implements SearchView.OnQueryTextListener, SearchView.OnMenuClickListener {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     public static final String FINISH_ON_SELECTION = "finishOnSelection";
 
     @BindView(R.id.makla_search_unit) TextView unitTextView;
@@ -131,15 +129,7 @@ class maklaSearchFragment extends BaseFragment implements SearchView.OnQueryText
         initLayout();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     @Override
     public void onResume() {

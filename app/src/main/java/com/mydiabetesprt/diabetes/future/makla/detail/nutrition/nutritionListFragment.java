@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.partage.Helper;
 
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.future.makla.BaseFoodFragment;
@@ -24,9 +24,7 @@ import butterknife.BindView;
 
 public class nutritionListFragment extends BaseFoodFragment {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.makla_list_nutritions) RecyclerView nutritionList;
 
     private nutritionListAdapter listAdapter;
@@ -89,15 +87,7 @@ public class nutritionListFragment extends BaseFoodFragment {
         initLayout();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     @Override
     public void onResume() {

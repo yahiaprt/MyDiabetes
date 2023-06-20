@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoader;
 import com.mydiabetesprt.diabetes.partage.data.synchronisation.DataLoaderListener;
@@ -39,9 +39,7 @@ import butterknife.BindView;
 
 public class EntrerSearchFragment extends BaseFragment implements SearchView.OnQueryTextListener, SearchView.OnMenuClickListener {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     private static final String TAG = EntrerSearchFragment.class.getSimpleName();
     private static final int SEARCH_INPUT_DELAY_IN_MILLIS = 1000;
     private static final int PAGE_SIZE = 25;
@@ -117,16 +115,7 @@ public class EntrerSearchFragment extends BaseFragment implements SearchView.OnQ
         preFillQuery();
     }
 
-    @Override
-    public void onBackPressed() {
 
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
 
     private void init() {
         if (getActivity() != null && getActivity().getIntent() != null && getActivity().getIntent().getExtras() != null) {

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.event.ets;
 import com.mydiabetesprt.diabetes.partage.event.fichier.ExportHistoireDeleteEt;
 import com.mydiabetesprt.diabetes.partage.event.permision.PermisionRequestEt;
@@ -35,9 +35,7 @@ import butterknife.BindView;
 
 public class ExportHistoryFragment extends BaseFragment {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.list) RecyclerView listView;
     @BindView(R.id.progressView) View progressView;
 
@@ -103,15 +101,7 @@ public class ExportHistoryFragment extends BaseFragment {
         checkPermissions();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     @Override
     public void onDestroy() {

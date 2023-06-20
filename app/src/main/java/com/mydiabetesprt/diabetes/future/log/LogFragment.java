@@ -1,17 +1,29 @@
 package com.mydiabetesprt.diabetes.future.log;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.InterstitialAd;
-import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
+   
+import com.mydiabetesprt.diabetes.R;
+import com.mydiabetesprt.diabetes.future.dashboard.DashboarddeFragment;
+import com.mydiabetesprt.diabetes.future.navigation.MainActivity;
+import com.mydiabetesprt.diabetes.partage.data.database.entity.Entry;
 import com.mydiabetesprt.diabetes.partage.data.database.ydk.EntryDao;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.EntryTag;
 import com.mydiabetesprt.diabetes.partage.data.database.entity.FoodEaten;
@@ -38,17 +50,13 @@ import java.util.List;
 
 import butterknife.BindView;
 
-/**
- * Created by Filip on 05.07.2015.
- */
+
 public class LogFragment extends DateFragment implements LogListAdapter.Listener {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.log_list) RecyclerView recyclerView;
     @BindView(R.id.log_progressbar) ProgressBar progressBar;
-
+   Context context = this.getContext();
     private LogListAdapter listAdapter;
     private StickHeaderDecoration listDecoration;
     private LinearLayoutManager listLayoutManager;
@@ -102,20 +110,19 @@ public class LogFragment extends DateFragment implements LogListAdapter.Listener
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initLayout();
-
+        requireActivity().getOnBackPressedDispatcher().addCallback(requireActivity(), new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+               Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
         // Fake delay for smoother fragment transitions
         new Handler().postDelayed(() -> goToDay(getDay()), 350);
     }
 
-    @Override
-    public void onBackPressed() {
 
-    }
 
-    @Override
-    public void onBackButtonPressed() {
-
-    }
 
     @Override
     public String getTitle() {

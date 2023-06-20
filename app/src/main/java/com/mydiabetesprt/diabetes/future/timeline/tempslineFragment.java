@@ -1,13 +1,17 @@
 package com.mydiabetesprt.diabetes.future.timeline;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.ads.InterstitialAd;
-import com.mydiabetesprt.diabetes.R;import com.mydiabetesprt.diabetes.partage.event.data.EntreAddedEt;
+   
+import com.mydiabetesprt.diabetes.R;
+import com.mydiabetesprt.diabetes.future.navigation.MainActivity;
+import com.mydiabetesprt.diabetes.partage.event.data.EntreAddedEt;
 import com.mydiabetesprt.diabetes.partage.event.data.EntreDeletedEt;
 import com.mydiabetesprt.diabetes.partage.event.data.EntreUpdatedEt;
 import com.mydiabetesprt.diabetes.partage.event.fichier.restorationImportedEt;
@@ -25,9 +29,7 @@ import butterknife.BindView;
 
 public class tempslineFragment extends DateFragment implements tempslineViewPager.Listener {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.viewpager)
     tempslineViewPager viewPager;
 
@@ -80,17 +82,15 @@ public class tempslineFragment extends DateFragment implements tempslineViewPage
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         viewPager.setup(getChildFragmentManager(), this);
+        requireActivity().getOnBackPressedDispatcher().addCallback(requireActivity(), new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
 
 
     @Override

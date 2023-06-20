@@ -8,7 +8,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.gms.ads.InterstitialAd;
+   
 import com.google.android.material.tabs.TabLayout;
 import com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity;
 import com.mydiabetesprt.diabetes.R;
@@ -24,9 +24,7 @@ import butterknife.BindView;
 
 public class maklaDetailFragment extends BaseFoodFragment {
     Boolean y=true;
-    private InterstitialAd mInterstitialAd;   private InterstitialAd mInterstitialAd2;
-    private InterstitialAd mInterstitialAd3;
-    private InterstitialAd mInterstitialAd4;
+     
     @BindView(R.id.makla_viewpager) ViewPager viewPager;
     @BindView(R.id.makla_tablayout) TabLayout tabLayout;
 
@@ -83,15 +81,7 @@ public class maklaDetailFragment extends BaseFoodFragment {
         update();
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
-
-    @Override
-    public void onBackButtonPressed() {
-
-    }
+  
 
     @Override
     public void onResume() {
