@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="3"/>
 
-    <com.mydiabetesprt.diabetes.partage.view.texteditor.LocalisedNumeroEditText
+    <com.yahia.healthysiabires.partage.view.texteditor.LocalisedNumeroEditText
         android:id="@+id/list_item_time_value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

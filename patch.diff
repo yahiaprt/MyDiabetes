@@ -11,9 +11,9 @@ Subject: [PATCH] More CRUD operations working
  .../diaguard/fragments/LogFragment.java            |   8 +-
  .../diaguard/fragments/MainFragment.java           |  18 +-
  .../diaguard/fragments/TimelineFragment.java       |  13 +-
- Diaguard/src/main/res/menu/main.xml                |   5 +
- Diaguard/src/main/res/values-de/strings.xml        |   2 +-
- Diaguard/src/main/res/values/strings.xml           |   2 +-
+ Mydiabetes/src/main/res/menu/main.xml                |   5 +
+ Mydiabetes/src/main/res/values-de/strings.xml        |   2 +-
+ Mydiabetes/src/main/res/values/strings.xml           |   2 +-
  10 files changed, 130 insertions(+), 199 deletions(-)
 
 diff --git a/.idea/dictionaries/Filip.xml b/.idea/dictionaries/Filip.xml
@@ -30,10 +30,10 @@ index ed978c3..1725ff3 100644
    </dictionary>
  </component>
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
 index 5008d0a..0108ace 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
 @@ -105,6 +105,9 @@ public class MainActivity extends ActionBarActivity {
              case R.id.action_calculator:
                  startActivity(new Intent(this, CalculatorActivity.class));
@@ -44,12 +44,12 @@ index 5008d0a..0108ace 100644
              case R.id.action_settings:
                  startActivity(new Intent(this, PreferenceActivity.class));
                  return true;
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
 index 06683e4..f84c9cd 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
 @@ -9,8 +9,10 @@ import android.database.sqlite.SQLiteDatabase;
- import com.mydiabetesprt.diabetes.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.Helper;
  
  import org.joda.time.DateTime;
 +import org.joda.time.format.DateTimeFormatter;
@@ -349,10 +349,10 @@ index 06683e4..f84c9cd 100644
 -    }
 -    */
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
 index 3177eb1..084927e 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
 @@ -23,7 +23,8 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
              date = new DateTime();
  
@@ -363,10 +363,10 @@ index 3177eb1..084927e 100644
          int day = date.getDayOfMonth();
  
          return new DatePickerDialog(getActivity(), this, year, month, day);
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
 index b0f09c9..a3e996e 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
 @@ -189,7 +189,7 @@ public class LogFragment extends Fragment {
      private void updateListView() {
  
@@ -400,10 +400,10 @@ index b0f09c9..a3e996e 100644
                  updateListView();
              }
          };
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 index 2df0a13..5f0ba6f 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 @@ -87,7 +87,7 @@ public class MainFragment extends Fragment {
          if(countBloodSugarMeasurements > 0) {
              textViewLatestValue.setTextSize(60);
@@ -451,10 +451,10 @@ index 2df0a13..5f0ba6f 100644
      }
 -    */
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
 index a86279d..1ce17b3 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
 @@ -78,6 +78,7 @@ public class TimelineFragment extends Fragment {
      @Override
      public void onConfigurationChanged(Configuration newConfig) {
@@ -514,10 +514,10 @@ index a86279d..1ce17b3 100644
                  updateContent();
              }
          };
-diff --git a/Diaguard/src/main/res/menu/main.xml b/Diaguard/src/main/res/menu/main.xml
+diff --git a/Mydiabetes/src/main/res/menu/main.xml b/Mydiabetes/src/main/res/menu/main.xml
 index 78e57fa..c6d7989 100644
---- a/Diaguard/src/main/res/menu/main.xml
-+++ b/Diaguard/src/main/res/menu/main.xml
+--- a/Mydiabetes/src/main/res/menu/main.xml
++++ b/Mydiabetes/src/main/res/menu/main.xml
 @@ -8,6 +8,11 @@
          android:title="@string/calculator"
          diaguard:showAsAction="ifRoom"/>
@@ -530,10 +530,10 @@ index 78e57fa..c6d7989 100644
      <item android:id="@+id/action_settings"
          android:icon="@drawable/ic_action_settings"
          android:title="@string/settings"
-diff --git a/Diaguard/src/main/res/values-de/strings.xml b/Diaguard/src/main/res/values-de/strings.xml
+diff --git a/Mydiabetes/src/main/res/values-de/strings.xml b/Mydiabetes/src/main/res/values-de/strings.xml
 index 6f9e17c..406925e 100644
---- a/Diaguard/src/main/res/values-de/strings.xml
-+++ b/Diaguard/src/main/res/values-de/strings.xml
+--- a/Mydiabetes/src/main/res/values-de/strings.xml
++++ b/Mydiabetes/src/main/res/values-de/strings.xml
 @@ -90,13 +90,13 @@
      <string name="weeks">Wochen</string>
  
@@ -549,10 +549,10 @@ index 6f9e17c..406925e 100644
      </string-array>
  
      <string name="morning">Morgens</string>
-diff --git a/Diaguard/src/main/res/values/strings.xml b/Diaguard/src/main/res/values/strings.xml
+diff --git a/Mydiabetes/src/main/res/values/strings.xml b/Mydiabetes/src/main/res/values/strings.xml
 index 24f8a90..ad50f17 100644
---- a/Diaguard/src/main/res/values/strings.xml
-+++ b/Diaguard/src/main/res/values/strings.xml
+--- a/Mydiabetes/src/main/res/values/strings.xml
++++ b/Mydiabetes/src/main/res/values/strings.xml
 @@ -104,13 +104,13 @@
      <string name="months">Months</string>
  
@@ -578,8 +578,8 @@ Subject: [PATCH] Next step for database update and date-handling Working chart
  and last measurement Preferences in one screen instead of two
 
 ---
- Diaguard/src/main/AndroidManifest.xml              |   2 +-
- .../mydiabetesprt/diabetes/DiaguardApplication.java  |   5 +-
+ Mydiabetes/src/main/AndroidManifest.xml              |   2 +-
+ .../mydiabetesprt/diabetes/MydiabetesApplication.java  |   5 +-
  .../com/mydiabetesprt/diabetes/ExportActivity.java   |  19 +-
  .../com/mydiabetesprt/diabetes/MainActivity.java     |   2 +-
  .../com/mydiabetesprt/diabetes/NewEventActivity.java | 163 ++++----------
@@ -594,24 +594,24 @@ Subject: [PATCH] Next step for database update and date-handling Working chart
  .../diaguard/helpers/PreferenceHelper.java         |   8 -
  .../diaguard/preferences/BackupPreference.java     |   4 +-
  .../diaguard/preferences/CleanUpPreference.java    |  10 +-
- Diaguard/src/main/res/layout/fragment_timeline.xml |   3 +-
- Diaguard/src/main/res/menu/item.xml                |  10 -
- Diaguard/src/main/res/xml/headers.xml              |  13 --
- Diaguard/src/main/res/xml/preferences.xml          | 239 ++++++++++-----------
+ Mydiabetes/src/main/res/layout/fragment_timeline.xml |   3 +-
+ Mydiabetes/src/main/res/menu/item.xml                |  10 -
+ Mydiabetes/src/main/res/xml/headers.xml              |  13 --
+ Mydiabetes/src/main/res/xml/preferences.xml          | 239 ++++++++++-----------
  .../src/main/res/xml/preferences_application.xml   |  43 ----
- Diaguard/src/main/res/xml/preferences_therapy.xml  |  85 --------
+ Mydiabetes/src/main/res/xml/preferences_therapy.xml  |  85 --------
  22 files changed, 318 insertions(+), 541 deletions(-)
- create mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java
- delete mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java
- delete mode 100644 Diaguard/src/main/res/menu/item.xml
- delete mode 100644 Diaguard/src/main/res/xml/headers.xml
- delete mode 100644 Diaguard/src/main/res/xml/preferences_application.xml
- delete mode 100644 Diaguard/src/main/res/xml/preferences_therapy.xml
+ create mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java
+ delete mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java
+ delete mode 100644 Mydiabetes/src/main/res/menu/item.xml
+ delete mode 100644 Mydiabetes/src/main/res/xml/headers.xml
+ delete mode 100644 Mydiabetes/src/main/res/xml/preferences_application.xml
+ delete mode 100644 Mydiabetes/src/main/res/xml/preferences_therapy.xml
 
-diff --git a/Diaguard/src/main/AndroidManifest.xml b/Diaguard/src/main/AndroidManifest.xml
+diff --git a/Mydiabetes/src/main/AndroidManifest.xml b/Mydiabetes/src/main/AndroidManifest.xml
 index 2b1bb04..6621e9f 100644
---- a/Diaguard/src/main/AndroidManifest.xml
-+++ b/Diaguard/src/main/AndroidManifest.xml
+--- a/Mydiabetes/src/main/AndroidManifest.xml
++++ b/Mydiabetes/src/main/AndroidManifest.xml
 @@ -47,7 +47,7 @@
          </activity>
  
@@ -621,11 +621,11 @@ index 2b1bb04..6621e9f 100644
              android:label="@string/settings">
              <meta-data
                  android:name="android.support.PARENT_ACTIVITY"
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java
 index b7dff75..56fe25d 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java
-@@ -2,7 +2,8 @@ package com.mydiabetesprt.diabetes;
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java
+@@ -2,7 +2,8 @@ package com.yahia.healthysiabires;
  
  import android.app.Application;
  import android.content.Context;
@@ -635,7 +635,7 @@ index b7dff75..56fe25d 100644
  
  /**
   * Created by Filip on 26.08.2014.
-@@ -19,6 +20,6 @@ public class DiaguardApplication extends Application {
+@@ -19,6 +20,6 @@ public class MydiabetesApplication extends Application {
  
          // Initialize global values
          context = getApplicationContext();
@@ -643,10 +643,10 @@ index b7dff75..56fe25d 100644
 +        JodaTimeAndroid.init(this);
      }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
 index cce8795..ee9c3c6 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
 @@ -87,7 +87,7 @@ public class ExportActivity extends ActionBarActivity {
          preferenceHelper = new PreferenceHelper(this);
  
@@ -708,10 +708,10 @@ index cce8795..ee9c3c6 100644
  
              // Dates
              chunk = new Chunk("\n" + preferenceHelper.getDateFormat().print(weekStart) + " - " +
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
 index e9fb376..5008d0a 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
 @@ -106,7 +106,7 @@ public class MainActivity extends ActionBarActivity {
                  startActivity(new Intent(this, CalculatorActivity.class));
                  return true;
@@ -721,10 +721,10 @@ index e9fb376..5008d0a 100644
                  return true;
              case R.id.action_newevent:
                  startActivityForResult(new Intent(this, NewEventActivity.class), MainActivity.REQUEST_EVENT_CREATED);
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
 index 5b415a9..a645496 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
 @@ -4,19 +4,13 @@ import android.app.Activity;
  import android.app.AlertDialog;
  import android.content.DialogInterface;
@@ -745,15 +745,15 @@ index 5b415a9..a645496 100644
  import android.view.MenuItem;
  import android.view.View;
  import android.widget.ArrayAdapter;
-@@ -37,15 +31,13 @@ import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.database.Model;
- import com.mydiabetesprt.diabetes.fragments.DatePickerFragment;
- import com.mydiabetesprt.diabetes.fragments.TimePickerFragment;
--import com.mydiabetesprt.diabetes.helpers.FileHelper;
-+import com.mydiabetesprt.diabetes.helpers.Helper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.Validator;
- import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+@@ -37,15 +31,13 @@ import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.database.Model;
+ import com.yahia.healthysiabires.fragments.DatePickerFragment;
+ import com.yahia.healthysiabires.fragments.TimePickerFragment;
+-import com.yahia.healthysiabires.helpers.FileHelper;
++import com.yahia.healthysiabires.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.Validator;
+ import com.yahia.healthysiabires.helpers.ViewHelper;
  
  import org.joda.time.DateTime;
  
@@ -1018,13 +1018,13 @@ index 5b415a9..a645496 100644
 -    }
  }
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java
 new file mode 100644
 index 0000000..274138b
 --- /dev/null
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferenceActivity.java
 @@ -0,0 +1,48 @@
-+package com.mydiabetesprt.diabetes;
++package com.yahia.healthysiabires;
 +
 +import android.os.Build;
 +import android.os.Bundle;
@@ -1073,13 +1073,13 @@ index 0000000..274138b
 +    }
 +}
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java
 deleted file mode 100644
 index 2e7a196..0000000
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/PreferencesActivity.java
 +++ /dev/null
 @@ -1,40 +0,0 @@
--package com.mydiabetesprt.diabetes;
+-package com.yahia.healthysiabires;
 -
 -import android.os.Build;
 -import android.os.Bundle;
@@ -1120,13 +1120,13 @@ index 2e7a196..0000000
 -    }
 -}
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
 index c65b548..06683e4 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
 @@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteDatabase;
  
- import com.mydiabetesprt.diabetes.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.Helper;
  
 +import org.joda.time.DateTime;
 +
@@ -1210,11 +1210,11 @@ index c65b548..06683e4 100644
          String query = "SELECT COUNT(*) FROM " + table + " WHERE " + selection + " = '" + selectionArg + "';";
          Cursor cursor = db.rawQuery(query, null);
          cursor.moveToFirst();
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
 index 4487fb0..12d9682 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
-@@ -4,12 +4,17 @@ import com.mydiabetesprt.diabetes.helpers.Helper;
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
+@@ -4,12 +4,17 @@ import com.yahia.healthysiabires.helpers.Helper;
  
  import org.joda.time.DateTime;
  
@@ -1245,10 +1245,10 @@ index 4487fb0..12d9682 100644
      @Override
      public String getTableName() {
          return DatabaseHelper.ENTRY;
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
 index 8f0a440..b0f09c9 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
 @@ -182,7 +182,7 @@ public class LogFragment extends Fragment {
  
      private void editEntry(Entry entry) {
@@ -1284,18 +1284,18 @@ index 8f0a440..b0f09c9 100644
                  updateListView();
              }
          };
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 index 4d1945d..2df0a13 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 @@ -10,11 +10,13 @@ import android.widget.TextView;
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
- import com.mydiabetesprt.diabetes.database.DatabaseHelper;
-+import com.mydiabetesprt.diabetes.database.Entry;
- import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.Helper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+ import com.yahia.healthysiabires.database.DatabaseHelper;
++import com.yahia.healthysiabires.database.Entry;
+ import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
  
  import org.joda.time.DateTime;
 +import org.joda.time.Minutes;
@@ -1370,10 +1370,10 @@ index 4d1945d..2df0a13 100644
      private void updateDashboard() {
          updateToday();
          updateAverage();
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
 index 7beb33c..a86279d 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
 @@ -11,6 +11,7 @@ import android.view.LayoutInflater;
  import android.view.MenuItem;
  import android.view.View;
@@ -1382,15 +1382,15 @@ index 7beb33c..a86279d 100644
  import android.widget.DatePicker;
  import android.widget.ImageView;
  import android.widget.LinearLayout;
-@@ -19,6 +20,7 @@ import com.mydiabetesprt.diabetes.MainActivity;
- import com.mydiabetesprt.diabetes.NewEventActivity;
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
-+import com.mydiabetesprt.diabetes.database.Entry;
- import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.ChartHelper;
- import com.mydiabetesprt.diabetes.helpers.Helper;
-@@ -27,6 +29,7 @@ import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
+@@ -19,6 +20,7 @@ import com.yahia.healthysiabires.MainActivity;
+ import com.yahia.healthysiabires.NewEventActivity;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
++import com.yahia.healthysiabires.database.Entry;
+ import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.ChartHelper;
+ import com.yahia.healthysiabires.helpers.Helper;
+@@ -27,6 +29,7 @@ import com.yahia.healthysiabires.helpers.PreferenceHelper;
  import org.achartengine.model.XYSeries;
  import org.achartengine.renderer.XYSeriesRenderer;
  import org.joda.time.DateTime;
@@ -1546,10 +1546,10 @@ index 7beb33c..a86279d 100644
                  updateContent();
              }
          };
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
 index 3128f0a..5f9496f 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
 @@ -246,8 +246,7 @@ public class FileHelper {
                  DateTime dateIteration = dateStart;
  
@@ -1579,10 +1579,10 @@ index 3128f0a..5f9496f 100644
  
              // Dates
              chunk = new Chunk("\n" + preferenceHelper.getDateFormat().print(weekStart) + " - " +
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
 index 819ea60..5781b94 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
 @@ -57,10 +57,6 @@ public class PreferenceHelper {
  
      // DATES
@@ -1605,17 +1605,17 @@ index 819ea60..5781b94 100644
      // BLOOD SUGAR
  
      public float getTargetValue() {
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
 index 2a0635b..04d295e 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
 @@ -10,6 +10,7 @@ import android.util.AttributeSet;
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
- import com.mydiabetesprt.diabetes.helpers.FileHelper;
-+import com.mydiabetesprt.diabetes.helpers.Helper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+ import com.yahia.healthysiabires.helpers.FileHelper;
++import com.yahia.healthysiabires.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.ViewHelper;
  
 @@ -88,7 +89,8 @@ public class BackupPreference extends DialogPreference {
          for(int position = 0; position < csvArray.length; position++) {
@@ -1627,10 +1627,10 @@ index 2a0635b..04d295e 100644
          }
  
          AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
 index 1e65af3..72f779c 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
 @@ -57,13 +57,11 @@ public class CleanUpPreference extends DialogPreference {
  
      @Override
@@ -1649,10 +1649,10 @@ index 1e65af3..72f779c 100644
  
              /*
              dataSource.open();
-diff --git a/Diaguard/src/main/res/layout/fragment_timeline.xml b/Diaguard/src/main/res/layout/fragment_timeline.xml
+diff --git a/Mydiabetes/src/main/res/layout/fragment_timeline.xml b/Mydiabetes/src/main/res/layout/fragment_timeline.xml
 index 81041eb..e830bbe 100644
---- a/Diaguard/src/main/res/layout/fragment_timeline.xml
-+++ b/Diaguard/src/main/res/layout/fragment_timeline.xml
+--- a/Mydiabetes/src/main/res/layout/fragment_timeline.xml
++++ b/Mydiabetes/src/main/res/layout/fragment_timeline.xml
 @@ -3,8 +3,7 @@
  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="fill_parent"
@@ -1663,10 +1663,10 @@ index 81041eb..e830bbe 100644
  
      <LinearLayout android:id="@+id/toolbar"
          android:layout_width="fill_parent"
-diff --git a/Diaguard/src/main/res/menu/item.xml b/Diaguard/src/main/res/menu/item.xml
+diff --git a/Mydiabetes/src/main/res/menu/item.xml b/Mydiabetes/src/main/res/menu/item.xml
 deleted file mode 100644
 index 10578ef..0000000
---- a/Diaguard/src/main/res/menu/item.xml
+--- a/Mydiabetes/src/main/res/menu/item.xml
 +++ /dev/null
 @@ -1,10 +0,0 @@
 -<?xml version="1.0" encoding="utf-8"?>
@@ -1680,10 +1680,10 @@ index 10578ef..0000000
 -        android:title="@string/remove"/>
 -</menu>
 \ No newline at end of file
-diff --git a/Diaguard/src/main/res/xml/headers.xml b/Diaguard/src/main/res/xml/headers.xml
+diff --git a/Mydiabetes/src/main/res/xml/headers.xml b/Mydiabetes/src/main/res/xml/headers.xml
 deleted file mode 100644
 index be94c45..0000000
---- a/Diaguard/src/main/res/xml/headers.xml
+--- a/Mydiabetes/src/main/res/xml/headers.xml
 +++ /dev/null
 @@ -1,13 +0,0 @@
 -<?xml version="1.0" encoding="utf-8"?>
@@ -1691,19 +1691,19 @@ index be94c45..0000000
 -<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
 -
 -    <header
--        android:fragment="com.mydiabetesprt.diabetes.PreferencesActivity$PreferenceFragmentApplication"
+-        android:fragment="com.yahia.healthysiabires.PreferencesActivity$PreferenceFragmentApplication"
 -        android:title="@string/application"/>
 -
 -    <header
--        android:fragment="com.mydiabetesprt.diabetes.PreferencesActivity$PreferenceFragmentTherapy"
+-        android:fragment="com.yahia.healthysiabires.PreferencesActivity$PreferenceFragmentTherapy"
 -        android:title="@string/therapy"/>
 -
 -</preference-headers>
 \ No newline at end of file
-diff --git a/Diaguard/src/main/res/xml/preferences.xml b/Diaguard/src/main/res/xml/preferences.xml
+diff --git a/Mydiabetes/src/main/res/xml/preferences.xml b/Mydiabetes/src/main/res/xml/preferences.xml
 index 33c6659..a9fbc0a 100644
---- a/Diaguard/src/main/res/xml/preferences.xml
-+++ b/Diaguard/src/main/res/xml/preferences.xml
+--- a/Mydiabetes/src/main/res/xml/preferences.xml
++++ b/Mydiabetes/src/main/res/xml/preferences.xml
 @@ -2,134 +2,115 @@
  
  <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
@@ -1715,7 +1715,7 @@ index 33c6659..a9fbc0a 100644
 -        <PreferenceCategory
 -            android:title="@string/general">
 -
--            <com.mydiabetesprt.diabetes.preferences.CategoryPreference
+-            <com.yahia.healthysiabires.preferences.CategoryPreference
 -                android:key="categories"
 -                android:title="@string/categories_active"
 -                android:entries="@array/categories"
@@ -1740,11 +1740,11 @@ index 33c6659..a9fbc0a 100644
 -        <PreferenceCategory
 -            android:title="@string/data">
 -
--            <com.mydiabetesprt.diabetes.preferences.CleanUpPreference
+-            <com.yahia.healthysiabires.preferences.CleanUpPreference
 -                android:key="cleanup"
 -                android:title="@string/cleanup"/>
 -
--            <com.mydiabetesprt.diabetes.preferences.BackupPreference
+-            <com.yahia.healthysiabires.preferences.BackupPreference
 -                android:key="backup"
 -                android:title="@string/backup"/>
 -
@@ -1792,21 +1792,21 @@ index 33c6659..a9fbc0a 100644
 -        <PreferenceCategory
 -            android:title="@string/pref_therapy_targets">
 -
--            <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-            <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -                android:key="target"
 -                android:title="@string/pref_therapy_targets_target"
 -                android:dialogTitle="@string/pref_therapy_targets_target"
 -                android:defaultValue="120"
 -                android:inputType="number"/>
 -
--            <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-            <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -                android:key="correction_value"
 -                android:title="@string/correction"
 -                android:dialogTitle="@string/correction"
 -                android:defaultValue="40"
 -                android:inputType="number"/>
 -
--            <com.mydiabetesprt.diabetes.preferences.FactorPreference
+-            <com.yahia.healthysiabires.preferences.FactorPreference
 -                android:key="factors"
 -                android:title="@string/factors"/>
 -
@@ -1820,14 +1820,14 @@ index 33c6659..a9fbc0a 100644
 -                android:title="@string/pref_therapy_targets_highlight"
 -                android:defaultValue="true"/>
 -
--            <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-            <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -                android:key="hyperclycemia"
 -                android:title="@string/pref_therapy_targets_hyperclycemia"
 -                android:dialogTitle="@string/pref_therapy_targets_hyperclycemia"
 -                android:defaultValue="180"
 -                android:inputType="number"/>
 -
--            <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-            <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -                android:key="hypoclycemia"
 -                android:title="@string/pref_therapy_targets_hypoclycemia"
 -                android:dialogTitle="@string/pref_therapy_targets_hypoclycemia"
@@ -1840,7 +1840,7 @@ index 33c6659..a9fbc0a 100644
 +    <PreferenceCategory
 +        android:title="@string/general">
 +
-+        <com.mydiabetesprt.diabetes.preferences.CategoryPreference
++        <com.yahia.healthysiabires.preferences.CategoryPreference
 +            android:key="categories"
 +            android:title="@string/categories_active"
 +            android:entries="@array/categories"
@@ -1858,11 +1858,11 @@ index 33c6659..a9fbc0a 100644
 +    <PreferenceCategory
 +        android:title="@string/data">
 +
-+        <com.mydiabetesprt.diabetes.preferences.CleanUpPreference
++        <com.yahia.healthysiabires.preferences.CleanUpPreference
 +            android:key="cleanup"
 +            android:title="@string/cleanup"/>
 +
-+        <com.mydiabetesprt.diabetes.preferences.BackupPreference
++        <com.yahia.healthysiabires.preferences.BackupPreference
 +            android:key="backup"
 +            android:title="@string/backup"/>
 +
@@ -1904,21 +1904,21 @@ index 33c6659..a9fbc0a 100644
 +    <PreferenceCategory
 +        android:title="@string/pref_therapy_targets">
 +
-+        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
++        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 +            android:key="target"
 +            android:title="@string/pref_therapy_targets_target"
 +            android:dialogTitle="@string/pref_therapy_targets_target"
 +            android:defaultValue="120"
 +            android:inputType="number"/>
 +
-+        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
++        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 +            android:key="correction_value"
 +            android:title="@string/correction"
 +            android:dialogTitle="@string/correction"
 +            android:defaultValue="40"
 +            android:inputType="number"/>
 +
-+        <com.mydiabetesprt.diabetes.preferences.FactorPreference
++        <com.yahia.healthysiabires.preferences.FactorPreference
 +            android:key="factors"
 +            android:title="@string/factors"/>
 +
@@ -1932,14 +1932,14 @@ index 33c6659..a9fbc0a 100644
 +            android:title="@string/pref_therapy_targets_highlight"
 +            android:defaultValue="true"/>
 +
-+        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
++        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 +            android:key="hyperclycemia"
 +            android:title="@string/pref_therapy_targets_hyperclycemia"
 +            android:dialogTitle="@string/pref_therapy_targets_hyperclycemia"
 +            android:defaultValue="180"
 +            android:inputType="number"/>
 +
-+        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
++        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 +            android:key="hypoclycemia"
 +            android:title="@string/pref_therapy_targets_hypoclycemia"
 +            android:dialogTitle="@string/pref_therapy_targets_hypoclycemia"
@@ -1950,10 +1950,10 @@ index 33c6659..a9fbc0a 100644
  
  </PreferenceScreen>
 \ No newline at end of file
-diff --git a/Diaguard/src/main/res/xml/preferences_application.xml b/Diaguard/src/main/res/xml/preferences_application.xml
+diff --git a/Mydiabetes/src/main/res/xml/preferences_application.xml b/Mydiabetes/src/main/res/xml/preferences_application.xml
 deleted file mode 100644
 index 376b236..0000000
---- a/Diaguard/src/main/res/xml/preferences_application.xml
+--- a/Mydiabetes/src/main/res/xml/preferences_application.xml
 +++ /dev/null
 @@ -1,43 +0,0 @@
 -<?xml version="1.0" encoding="utf-8"?>
@@ -1963,7 +1963,7 @@ index 376b236..0000000
 -    <PreferenceCategory
 -        android:title="@string/general">
 -
--        <com.mydiabetesprt.diabetes.preferences.CategoryPreference
+-        <com.yahia.healthysiabires.preferences.CategoryPreference
 -            android:key="categories"
 -            android:title="@string/categories_active"
 -            android:entries="@array/categories"
@@ -1988,11 +1988,11 @@ index 376b236..0000000
 -    <PreferenceCategory
 -        android:title="@string/data">
 -
--        <com.mydiabetesprt.diabetes.preferences.CleanUpPreference
+-        <com.yahia.healthysiabires.preferences.CleanUpPreference
 -            android:key="cleanup"
 -            android:title="@string/cleanup"/>
 -
--        <com.mydiabetesprt.diabetes.preferences.BackupPreference
+-        <com.yahia.healthysiabires.preferences.BackupPreference
 -            android:key="backup"
 -            android:title="@string/backup"/>
 -
@@ -2000,10 +2000,10 @@ index 376b236..0000000
 -
 -</PreferenceScreen>
 \ No newline at end of file
-diff --git a/Diaguard/src/main/res/xml/preferences_therapy.xml b/Diaguard/src/main/res/xml/preferences_therapy.xml
+diff --git a/Mydiabetes/src/main/res/xml/preferences_therapy.xml b/Mydiabetes/src/main/res/xml/preferences_therapy.xml
 deleted file mode 100644
 index eec4586..0000000
---- a/Diaguard/src/main/res/xml/preferences_therapy.xml
+--- a/Mydiabetes/src/main/res/xml/preferences_therapy.xml
 +++ /dev/null
 @@ -1,85 +0,0 @@
 -<?xml version="1.0" encoding="utf-8"?>
@@ -2046,21 +2046,21 @@ index eec4586..0000000
 -    <PreferenceCategory
 -        android:title="@string/pref_therapy_targets">
 -
--        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -            android:key="target"
 -            android:title="@string/pref_therapy_targets_target"
 -            android:dialogTitle="@string/pref_therapy_targets_target"
 -            android:defaultValue="120"
 -            android:inputType="number"/>
 -
--        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -            android:key="correction_value"
 -            android:title="@string/correction"
 -            android:dialogTitle="@string/correction"
 -            android:defaultValue="40"
 -            android:inputType="number"/>
 -
--        <com.mydiabetesprt.diabetes.preferences.FactorPreference
+-        <com.yahia.healthysiabires.preferences.FactorPreference
 -            android:key="factors"
 -            android:title="@string/factors"/>
 -
@@ -2074,14 +2074,14 @@ index eec4586..0000000
 -            android:title="@string/pref_therapy_targets_highlight"
 -            android:defaultValue="true"/>
 -
--        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -            android:key="hyperclycemia"
 -            android:title="@string/pref_therapy_targets_hyperclycemia"
 -            android:dialogTitle="@string/pref_therapy_targets_hyperclycemia"
 -            android:defaultValue="180"
 -            android:inputType="number"/>
 -
--        <com.mydiabetesprt.diabetes.preferences.BloodSugarPreference
+-        <com.yahia.healthysiabires.preferences.BloodSugarPreference
 -            android:key="hypoclycemia"
 -            android:title="@string/pref_therapy_targets_hypoclycemia"
 -            android:dialogTitle="@string/pref_therapy_targets_hypoclycemia"
@@ -2113,11 +2113,11 @@ Subject: [PATCH] First step for database update and date-handling
  .idea/libraries/opencsv_2_3.xml                    |   9 -
  .idea/libraries/support_annotations_20_0_0.xml     |  11 -
  .idea/libraries/support_v4_20_0_0.xml              |  11 -
- Diaguard/Diaguard.iml                              |   7 +-
- Diaguard/build.gradle                              |  12 +-
- Diaguard/src/main/AndroidManifest.xml              |  20 +-
+ Mydiabetes/Mydiabetes.iml                              |   7 +-
+ Mydiabetes/build.gradle                              |  12 +-
+ Mydiabetes/src/main/AndroidManifest.xml              |  20 +-
  .../mydiabetesprt/diabetes/CalculatorActivity.java   |  76 ++---
- .../mydiabetesprt/diabetes/DiaguardApplication.java  |  24 ++
+ .../mydiabetesprt/diabetes/MydiabetesApplication.java  |  24 ++
  .../com/mydiabetesprt/diabetes/ExportActivity.java   | 121 +++----
  .../com/mydiabetesprt/diabetes/MainActivity.java     | 247 +++++---------
  .../com/mydiabetesprt/diabetes/NewEventActivity.java | 109 +++----
@@ -2147,16 +2147,16 @@ Subject: [PATCH] First step for database update and date-handling
  .../diaguard/preferences/CleanUpPreference.java    |  17 +-
  .../diaguard/views/EndlessListView.java            |  93 ------
  .../mydiabetesprt/diabetes/views/EventEditText.java  |  64 ----
- Diaguard/src/main/res/drawable-hdpi/ic_home.png    | Bin 1216 -> 0 bytes
- Diaguard/src/main/res/drawable-mdpi/ic_home.png    | Bin 784 -> 0 bytes
- Diaguard/src/main/res/drawable-xhdpi/ic_home.png   | Bin 1638 -> 0 bytes
- Diaguard/src/main/res/drawable-xxhdpi/ic_home.png  | Bin 2649 -> 0 bytes
- Diaguard/src/main/res/drawable-xxxhdpi/ic_home.png | Bin 3704 -> 2608 bytes
- Diaguard/src/main/res/layout/activity_main.xml     |  21 +-
- Diaguard/src/main/res/layout/fragment_main.xml     |  25 +-
- Diaguard/src/main/res/menu/main.xml                |  21 ++
- Diaguard/src/main/res/values-w820dp/dimens.xml     |   6 +
- Diaguard/src/main/res/values/styles.xml            |   9 +-
+ Mydiabetes/src/main/res/drawable-hdpi/ic_home.png    | Bin 1216 -> 0 bytes
+ Mydiabetes/src/main/res/drawable-mdpi/ic_home.png    | Bin 784 -> 0 bytes
+ Mydiabetes/src/main/res/drawable-xhdpi/ic_home.png   | Bin 1638 -> 0 bytes
+ Mydiabetes/src/main/res/drawable-xxhdpi/ic_home.png  | Bin 2649 -> 0 bytes
+ Mydiabetes/src/main/res/drawable-xxxhdpi/ic_home.png | Bin 3704 -> 2608 bytes
+ Mydiabetes/src/main/res/layout/activity_main.xml     |  21 +-
+ Mydiabetes/src/main/res/layout/fragment_main.xml     |  25 +-
+ Mydiabetes/src/main/res/menu/main.xml                |  21 ++
+ Mydiabetes/src/main/res/values-w820dp/dimens.xml     |   6 +
+ Mydiabetes/src/main/res/values/styles.xml            |   9 +-
  56 files changed, 784 insertions(+), 1498 deletions(-)
  delete mode 100644 .idea/libraries/achartengine_1_2_0.xml
  delete mode 100644 .idea/libraries/adapter_1_0_1.xml
@@ -2169,19 +2169,19 @@ Subject: [PATCH] First step for database update and date-handling
  delete mode 100644 .idea/libraries/opencsv_2_3.xml
  delete mode 100644 .idea/libraries/support_annotations_20_0_0.xml
  delete mode 100644 .idea/libraries/support_v4_20_0_0.xml
- create mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java
- delete mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java
- delete mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java
- delete mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
- create mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Model.java
- delete mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java
- delete mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java
- delete mode 100644 Diaguard/src/main/res/drawable-hdpi/ic_home.png
- delete mode 100644 Diaguard/src/main/res/drawable-mdpi/ic_home.png
- delete mode 100644 Diaguard/src/main/res/drawable-xhdpi/ic_home.png
- delete mode 100644 Diaguard/src/main/res/drawable-xxhdpi/ic_home.png
- create mode 100644 Diaguard/src/main/res/menu/main.xml
- create mode 100644 Diaguard/src/main/res/values-w820dp/dimens.xml
+ create mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java
+ delete mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java
+ delete mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java
+ delete mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
+ create mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Model.java
+ delete mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java
+ delete mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java
+ delete mode 100644 Mydiabetes/src/main/res/drawable-hdpi/ic_home.png
+ delete mode 100644 Mydiabetes/src/main/res/drawable-mdpi/ic_home.png
+ delete mode 100644 Mydiabetes/src/main/res/drawable-xhdpi/ic_home.png
+ delete mode 100644 Mydiabetes/src/main/res/drawable-xxhdpi/ic_home.png
+ create mode 100644 Mydiabetes/src/main/res/menu/main.xml
+ create mode 100644 Mydiabetes/src/main/res/values-w820dp/dimens.xml
 
 diff --git a/.idea/dictionaries/Filip.xml b/.idea/dictionaries/Filip.xml
 index 1a92842..ed978c3 100644
@@ -2207,7 +2207,7 @@ index 7eb4da6..0000000
 -<component name="libraryTable">
 -  <library name="achartengine-1.2.0">
 -    <CLASSES>
--      <root url="jar://$PROJECT_DIR$/Diaguard/libs/achartengine-1.2.0.jar!/" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/libs/achartengine-1.2.0.jar!/" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2223,8 +2223,8 @@ index fdf341b..0000000
 -<component name="libraryTable">
 -  <library name="adapter-1.0.1">
 -    <CLASSES>
--      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.commonsware.cwac/adapter/1.0.1/classes.jar!/" />
--      <root url="file://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.commonsware.cwac/adapter/1.0.1/res" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.commonsware.cwac/adapter/1.0.1/classes.jar!/" />
+-      <root url="file://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.commonsware.cwac/adapter/1.0.1/res" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2240,8 +2240,8 @@ index 0000000..a23078a
 +<component name="libraryTable">
 +  <library name="android.joda-2.4.0">
 +    <CLASSES>
-+      <root url="file://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/net.danlew/android.joda/2.4.0/res" />
-+      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/net.danlew/android.joda/2.4.0/classes.jar!/" />
++      <root url="file://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/net.danlew/android.joda/2.4.0/res" />
++      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/net.danlew/android.joda/2.4.0/classes.jar!/" />
 +    </CLASSES>
 +    <JAVADOC />
 +    <SOURCES />
@@ -2257,11 +2257,11 @@ index 6dbbd59..0000000
 -<component name="libraryTable">
 -  <library name="appcompat-v7-20.0.0">
 -    <ANNOTATIONS>
--      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/annotations.zip!/" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/annotations.zip!/" />
 -    </ANNOTATIONS>
 -    <CLASSES>
--      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar!/" />
--      <root url="file://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/res" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar!/" />
+-      <root url="file://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/res" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2277,8 +2277,8 @@ index 0e4f7bf..0000000
 -<component name="libraryTable">
 -  <library name="crouton-1.8.4">
 -    <CLASSES>
--      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.4/classes.jar!/" />
--      <root url="file://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.4/res" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.4/classes.jar!/" />
+-      <root url="file://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.4/res" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2294,8 +2294,8 @@ index 3200378..0000000
 -<component name="libraryTable">
 -  <library name="endless-1.2.3">
 -    <CLASSES>
--      <root url="file://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.commonsware.cwac/endless/1.2.3/res" />
--      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.commonsware.cwac/endless/1.2.3/classes.jar!/" />
+-      <root url="file://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.commonsware.cwac/endless/1.2.3/res" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.commonsware.cwac/endless/1.2.3/classes.jar!/" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2311,7 +2311,7 @@ index 4ff007a..0000000
 -<component name="libraryTable">
 -  <library name="itextg-5.4.4">
 -    <CLASSES>
--      <root url="jar://$PROJECT_DIR$/Diaguard/libs/itextg-5.4.4.jar!/" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/libs/itextg-5.4.4.jar!/" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2327,7 +2327,7 @@ index e43d0b7..0000000
 -<component name="libraryTable">
 -  <library name="nineoldandroids-2.4.0">
 -    <CLASSES>
--      <root url="jar://$PROJECT_DIR$/Diaguard/libs/nineoldandroids-2.4.0.jar!/" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/libs/nineoldandroids-2.4.0.jar!/" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2343,7 +2343,7 @@ index 6dc8b5b..0000000
 -<component name="libraryTable">
 -  <library name="opencsv-2.3">
 -    <CLASSES>
--      <root url="jar://$PROJECT_DIR$/Diaguard/libs/opencsv-2.3.jar!/" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/libs/opencsv-2.3.jar!/" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
@@ -2377,19 +2377,19 @@ index adb3c5c..0000000
 -<component name="libraryTable">
 -  <library name="support-v4-20.0.0">
 -    <CLASSES>
--      <root url="file://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/res" />
--      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar!/" />
--      <root url="jar://$PROJECT_DIR$/Diaguard/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar!/" />
+-      <root url="file://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/res" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar!/" />
+-      <root url="jar://$PROJECT_DIR$/Mydiabetes/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar!/" />
 -    </CLASSES>
 -    <JAVADOC />
 -    <SOURCES />
 -  </library>
 -</component>
 \ No newline at end of file
-diff --git a/Diaguard/Diaguard.iml b/Diaguard/Diaguard.iml
+diff --git a/Mydiabetes/Mydiabetes.iml b/Mydiabetes/Mydiabetes.iml
 index 1004c55..57b8123 100644
---- a/Diaguard/Diaguard.iml
-+++ b/Diaguard/Diaguard.iml
+--- a/Mydiabetes/Mydiabetes.iml
++++ b/Mydiabetes/Mydiabetes.iml
 @@ -37,22 +37,22 @@
        <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/test/debug" type="java-test-resource" />
        <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
@@ -2424,10 +2424,10 @@ index 1004c55..57b8123 100644
      <orderEntry type="library" exported="" name="nineoldandroids-2.4.0" level="project" />
      <orderEntry type="library" exported="" name="appcompat-v7-20.0.0" level="project" />
      <orderEntry type="library" exported="" name="achartengine-1.2.0" level="project" />
-diff --git a/Diaguard/build.gradle b/Diaguard/build.gradle
+diff --git a/Mydiabetes/build.gradle b/Mydiabetes/build.gradle
 index ca9db1e..235bf8e 100644
---- a/Diaguard/build.gradle
-+++ b/Diaguard/build.gradle
+--- a/Mydiabetes/build.gradle
++++ b/Mydiabetes/build.gradle
 @@ -26,13 +26,15 @@ android {
  dependencies {
      compile 'com.android.support:appcompat-v7:20+'
@@ -2449,15 +2449,15 @@ index ca9db1e..235bf8e 100644
 +    compile files('libs/opencsv-2.3.jar')
 +    compile files('libs/itextg-5.4.4.jar')
  }
-diff --git a/Diaguard/src/main/AndroidManifest.xml b/Diaguard/src/main/AndroidManifest.xml
+diff --git a/Mydiabetes/src/main/AndroidManifest.xml b/Mydiabetes/src/main/AndroidManifest.xml
 index 39e3962..2b1bb04 100644
---- a/Diaguard/src/main/AndroidManifest.xml
-+++ b/Diaguard/src/main/AndroidManifest.xml
+--- a/Mydiabetes/src/main/AndroidManifest.xml
++++ b/Mydiabetes/src/main/AndroidManifest.xml
 @@ -8,6 +8,7 @@
      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
  
      <application
-+        android:name=".DiaguardApplication"
++        android:name=".MydiabetesApplication"
          android:allowBackup="true"
          android:icon="@drawable/ic_launcher"
          android:label="@string/app_name"
@@ -2514,20 +2514,20 @@ index 39e3962..2b1bb04 100644
              <meta-data
                  android:name="android.support.PARENT_ACTIVITY"
                  android:value=".MainActivity" />
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java
 index 453a3dd..fdf39ec 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/CalculatorActivity.java
 @@ -18,12 +18,13 @@ import android.widget.Spinner;
  import android.widget.TextView;
  
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Entry;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.Helper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.Validator;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Entry;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.Validator;
  
 -import java.util.Calendar;
 +import org.joda.time.DateTime;
@@ -2689,13 +2689,13 @@ index 453a3dd..fdf39ec 100644
          }
  
          dataSource.close();
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java
 new file mode 100644
 index 0000000..b7dff75
 --- /dev/null
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/DiaguardApplication.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MydiabetesApplication.java
 @@ -0,0 +1,24 @@
-+package com.mydiabetesprt.diabetes;
++package com.yahia.healthysiabires;
 +
 +import android.app.Application;
 +import android.content.Context;
@@ -2704,7 +2704,7 @@ index 0000000..b7dff75
 +/**
 + * Created by Filip on 26.08.2014.
 + */
-+public class DiaguardApplication extends Application {
++public class MydiabetesApplication extends Application {
 +    private static Context context;
 +    public static Context getContext() {
 +        return context;
@@ -2719,21 +2719,21 @@ index 0000000..b7dff75
 +        //JodaTimeAndroid.init(this);
 +    }
 +}
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
 index b573a31..cce8795 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/ExportActivity.java
 @@ -19,10 +19,9 @@ import android.widget.DatePicker;
  import android.widget.Spinner;
  
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.fragments.DatePickerFragment;
- import com.mydiabetesprt.diabetes.helpers.FileHelper;
--import com.mydiabetesprt.diabetes.helpers.Helper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.fragments.DatePickerFragment;
+ import com.yahia.healthysiabires.helpers.FileHelper;
+-import com.yahia.healthysiabires.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.ViewHelper;
  import com.itextpdf.text.BaseColor;
 @@ -41,10 +40,15 @@ import com.itextpdf.text.pdf.PdfPTable;
  import com.itextpdf.text.pdf.PdfPageEventHelper;
@@ -2798,7 +2798,7 @@ index b573a31..cce8795 100644
 @@ -145,9 +148,9 @@ public class ExportActivity extends ActionBarActivity {
          intent.setType(FileHelper.MIME_MAIL);
  
-         // Diaguard Export: DateStart - DateEnd
+         // Mydiabetes Export: DateStart - DateEnd
 -        SimpleDateFormat format = preferenceHelper.getDateFormat();
 +        DateTimeFormatter format = preferenceHelper.getDateFormat();
          String subject = getString(R.string.app_name) + " " + getString(R.string.export) + ": " +
@@ -3012,12 +3012,12 @@ index b573a31..cce8795 100644
              Chunk chunk = new Chunk(stamp,
                      FontFactory.getFont(FontFactory.HELVETICA, 9, BaseColor.GRAY));
              ColumnText.showTextAligned(writer.getDirectContent(),
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
 index 736c364..e9fb376 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/MainActivity.java
 @@ -1,28 +1,21 @@
- package com.mydiabetesprt.diabetes;
+ package com.yahia.healthysiabires;
  
  import android.content.Intent;
 -import android.content.res.Configuration;
@@ -3041,12 +3041,12 @@ index 736c364..e9fb376 100644
 -import android.widget.ListView;
 -import android.widget.TextView;
  
--import com.mydiabetesprt.diabetes.adapters.DrawerListViewAdapter;
- import com.mydiabetesprt.diabetes.fragments.LogFragment;
- import com.mydiabetesprt.diabetes.fragments.MainFragment;
- import com.mydiabetesprt.diabetes.fragments.TimelineFragment;
--import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+-import com.yahia.healthysiabires.adapters.DrawerListViewAdapter;
+ import com.yahia.healthysiabires.fragments.LogFragment;
+ import com.yahia.healthysiabires.fragments.MainFragment;
+ import com.yahia.healthysiabires.fragments.TimelineFragment;
+-import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.ViewHelper;
  
  import java.util.ArrayList;
 @@ -35,25 +28,21 @@ public class MainActivity extends ActionBarActivity {
@@ -3073,7 +3073,7 @@ index 736c364..e9fb376 100644
          setContentView(R.layout.activity_main);
 -        getSupportActionBar().setTitle(getString(R.string.app_name));
 -        initialize();
-+        // TODO: Put in DiaguardApplication.java (needs Activity?)
++        // TODO: Put in MydiabetesApplication.java (needs Activity?)
 +        PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
 +        initializeGUI();
 +    }
@@ -3315,10 +3315,10 @@ index 736c364..e9fb376 100644
 +        }
 +    }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
 index 506ef27..5b415a9 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
 @@ -19,8 +19,6 @@ import android.view.Menu;
  import android.view.MenuInflater;
  import android.view.MenuItem;
@@ -3329,19 +3329,19 @@ index 506ef27..5b415a9 100644
  import android.widget.AutoCompleteTextView;
  import android.widget.Button;
 @@ -34,8 +32,9 @@ import android.widget.TimePicker;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
- import com.mydiabetesprt.diabetes.database.DatabaseHelper;
- import com.mydiabetesprt.diabetes.database.Entry;
--import com.mydiabetesprt.diabetes.database.Event;
- import com.mydiabetesprt.diabetes.database.makla;
-+import com.mydiabetesprt.diabetes.database.Measurement;
-+import com.mydiabetesprt.diabetes.database.Model;
- import com.mydiabetesprt.diabetes.fragments.DatePickerFragment;
- import com.mydiabetesprt.diabetes.fragments.TimePickerFragment;
- import com.mydiabetesprt.diabetes.helpers.FileHelper;
-@@ -43,10 +42,11 @@ import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.Validator;
- import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+ import com.yahia.healthysiabires.database.DatabaseHelper;
+ import com.yahia.healthysiabires.database.Entry;
+-import com.yahia.healthysiabires.database.Event;
+ import com.yahia.healthysiabires.database.makla;
++import com.yahia.healthysiabires.database.Measurement;
++import com.yahia.healthysiabires.database.Model;
+ import com.yahia.healthysiabires.fragments.DatePickerFragment;
+ import com.yahia.healthysiabires.fragments.TimePickerFragment;
+ import com.yahia.healthysiabires.helpers.FileHelper;
+@@ -43,10 +42,11 @@ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.Validator;
+ import com.yahia.healthysiabires.helpers.ViewHelper;
  
 +import org.joda.time.DateTime;
 +
@@ -3616,13 +3616,13 @@ index 506ef27..5b415a9 100644
                  setTime();
              }
          };
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java
 deleted file mode 100644
 index 950fcb5..0000000
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/DrawerListViewAdapter.java
 +++ /dev/null
 @@ -1,70 +0,0 @@
--package com.mydiabetesprt.diabetes.adapters;
+-package com.yahia.healthysiabires.adapters;
 -
 -import android.content.Context;
 -import android.graphics.Typeface;
@@ -3633,8 +3633,8 @@ index 950fcb5..0000000
 -import android.widget.ImageView;
 -import android.widget.TextView;
 -
--import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
+-import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.helpers.PreferenceHelper;
 -
 -/**
 - * Created by Filip on 16.03.14.
@@ -3693,13 +3693,13 @@ index 950fcb5..0000000
 -    }
 -}
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java
 deleted file mode 100644
 index 449fd76..0000000
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/EndlessListViewAdapter.java
 +++ /dev/null
 @@ -1,120 +0,0 @@
--package com.mydiabetesprt.diabetes.adapters;
+-package com.yahia.healthysiabires.adapters;
 -
 -import android.content.Context;
 -import android.view.LayoutInflater;
@@ -3708,9 +3708,9 @@ index 449fd76..0000000
 -import android.view.animation.Animation;
 -import android.view.animation.RotateAnimation;
 -
--import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
--import com.mydiabetesprt.diabetes.database.Event;
+-import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.DatabaseDataSource;
+-import com.yahia.healthysiabires.database.Event;
 -import com.commonsware.cwac.endless.EndlessAdapter;
 -
 -import java.util.ArrayList;
@@ -3820,17 +3820,17 @@ index 449fd76..0000000
 -    }
 -}
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java
 index de71e1c..a1720b7 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/adapters/ListViewAdapterLog.java
 @@ -11,7 +11,7 @@ import android.widget.ImageView;
  import android.widget.TextView;
  
- import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
  
  import java.util.ArrayList;
 @@ -32,19 +32,19 @@ public class ListViewAdapterLog extends BaseAdapter {
@@ -3898,11 +3898,11 @@ index de71e1c..a1720b7 100644
  
          return convertView;
      }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
 index e08a3ed..c65b548 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
-@@ -2,23 +2,22 @@ package com.mydiabetesprt.diabetes.database;
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+@@ -2,23 +2,22 @@ package com.yahia.healthysiabires.database;
  
  import android.content.ContentValues;
  import android.content.Context;
@@ -3910,7 +3910,7 @@ index e08a3ed..c65b548 100644
  import android.database.Cursor;
  import android.database.sqlite.SQLiteDatabase;
  
- import com.mydiabetesprt.diabetes.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.Helper;
  
 -import java.text.SimpleDateFormat;
  import java.util.ArrayList;
@@ -4368,15 +4368,15 @@ index e08a3ed..c65b548 100644
 -    // endregion
 +    */
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
 index 62ec161..1370a8f 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
 @@ -6,11 +6,6 @@ import android.database.Cursor;
  import android.database.sqlite.SQLiteDatabase;
  import android.database.sqlite.SQLiteOpenHelper;
  
--import com.mydiabetesprt.diabetes.helpers.Helper;
+-import com.yahia.healthysiabires.helpers.Helper;
 -
 -import java.util.ArrayList;
 -import java.util.List;
@@ -4404,13 +4404,13 @@ index 62ec161..1370a8f 100644
      }
  
      @Override
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
 index 9a8cedb..4487fb0 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
-@@ -2,42 +2,25 @@ package com.mydiabetesprt.diabetes.database;
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
+@@ -2,42 +2,25 @@ package com.yahia.healthysiabires.database;
  
- import com.mydiabetesprt.diabetes.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.Helper;
  
 -import java.text.ParseException;
 -import java.util.Calendar;
@@ -4467,15 +4467,15 @@ index 9a8cedb..4487fb0 100644
 +        return DatabaseHelper.ENTRY;
 +    }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
 deleted file mode 100644
 index 6cf1486..0000000
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
 +++ /dev/null
 @@ -1,77 +0,0 @@
--package com.mydiabetesprt.diabetes.database;
+-package com.yahia.healthysiabires.database;
 -
--import com.mydiabetesprt.diabetes.helpers.Helper;
+-import com.yahia.healthysiabires.helpers.Helper;
 -
 -import java.text.ParseException;
 -import java.util.Calendar;
@@ -4550,13 +4550,13 @@ index 6cf1486..0000000
 -        this.entryId = entryId;
 -    }
 -}
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/makla.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/makla.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/makla.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/makla.java
 index 36dfe23..328b815 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/makla.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/makla.java
-@@ -2,26 +2,18 @@ package com.mydiabetesprt.diabetes.database;
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/makla.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/makla.java
+@@ -2,26 +2,18 @@ package com.yahia.healthysiabires.database;
  
- import com.mydiabetesprt.diabetes.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.Helper;
  
 -import java.text.ParseException;
 -import java.util.Calendar;
@@ -4620,14 +4620,14 @@ index 36dfe23..328b815 100644
 +        return DatabaseHelper.makla;
 +    }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
 index 48558e2..6221871 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
 @@ -1,16 +1,10 @@
- package com.mydiabetesprt.diabetes.database;
+ package com.yahia.healthysiabires.database;
  
--import com.mydiabetesprt.diabetes.helpers.Helper;
+-import com.yahia.healthysiabires.helpers.Helper;
 -
 -import java.text.ParseException;
 -import java.util.Calendar;
@@ -4665,13 +4665,13 @@ index 48558e2..6221871 100644
 +        return DatabaseHelper.MEASUREMENT;
 +    }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Model.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Model.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Model.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Model.java
 new file mode 100644
 index 0000000..034784b
 --- /dev/null
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Model.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Model.java
 @@ -0,0 +1,19 @@
-+package com.mydiabetesprt.diabetes.database;
++package com.yahia.healthysiabires.database;
 +
 +/**
 + * Created by Filip on 13.08.2014.
@@ -4691,10 +4691,10 @@ index 0000000..034784b
 +    public abstract String getTableName();
 +}
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
 index 37fb116..3177eb1 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/DatePickerFragment.java
 @@ -6,7 +6,7 @@ import android.os.Bundle;
  import android.support.v4.app.DialogFragment;
  import android.widget.DatePicker;
@@ -4725,10 +4725,10 @@ index 37fb116..3177eb1 100644
  
          return new DatePickerDialog(getActivity(), this, year, month, day);
      }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
 index 7ddf83b..8f0a440 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/LogFragment.java
 @@ -9,8 +9,6 @@ import android.os.Bundle;
  import android.support.v4.app.DialogFragment;
  import android.support.v4.app.Fragment;
@@ -4739,15 +4739,15 @@ index 7ddf83b..8f0a440 100644
  import android.view.View;
  import android.view.ViewGroup;
 @@ -22,15 +20,13 @@ import android.widget.ListView;
- import com.mydiabetesprt.diabetes.MainActivity;
- import com.mydiabetesprt.diabetes.NewEventActivity;
- import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.adapters.ListViewAdapterLog;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Entry;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.MainActivity;
+ import com.yahia.healthysiabires.NewEventActivity;
+ import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.adapters.ListViewAdapterLog;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Entry;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
  
 -import java.text.SimpleDateFormat;
 -import java.util.ArrayList;
@@ -4884,12 +4884,12 @@ index 7ddf83b..8f0a440 100644
                  updateListView();
              }
          };
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 index fed9829..4d1945d 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 @@ -1,31 +1,26 @@
- package com.mydiabetesprt.diabetes.fragments;
+ package com.yahia.healthysiabires.fragments;
  
 -import android.content.Intent;
  import android.os.Bundle;
@@ -4902,15 +4902,15 @@ index fed9829..4d1945d 100644
  import android.view.ViewGroup;
  import android.widget.TextView;
  
--import com.mydiabetesprt.diabetes.MainActivity;
--import com.mydiabetesprt.diabetes.NewEventActivity;
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.DatabaseHelper;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.Helper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
+-import com.yahia.healthysiabires.MainActivity;
+-import com.yahia.healthysiabires.NewEventActivity;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.DatabaseHelper;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
  
 -import java.util.Calendar;
 +import org.joda.time.DateTime;
@@ -5039,10 +5039,10 @@ index fed9829..4d1945d 100644
 -    }
 +    */
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java
 index 724ef49..b556350 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimePickerFragment.java
 @@ -7,7 +7,7 @@ import android.support.v4.app.DialogFragment;
  import android.text.format.DateFormat;
  import android.widget.TimePicker;
@@ -5074,10 +5074,10 @@ index 724ef49..b556350 100644
  
          return new TimePickerDialog(getActivity(), this, hourOfDay, minute,
                  DateFormat.is24HourFormat(getActivity()));
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
 index 2b17db8..7beb33c 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/TimelineFragment.java
 @@ -8,12 +8,9 @@ import android.os.Bundle;
  import android.support.v4.app.DialogFragment;
  import android.support.v4.app.Fragment;
@@ -5091,16 +5091,16 @@ index 2b17db8..7beb33c 100644
  import android.widget.DatePicker;
  import android.widget.ImageView;
  import android.widget.LinearLayout;
-@@ -22,19 +19,16 @@ import com.mydiabetesprt.diabetes.MainActivity;
- import com.mydiabetesprt.diabetes.NewEventActivity;
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.ChartHelper;
- import com.mydiabetesprt.diabetes.helpers.Helper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
--import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+@@ -22,19 +19,16 @@ import com.yahia.healthysiabires.MainActivity;
+ import com.yahia.healthysiabires.NewEventActivity;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.ChartHelper;
+ import com.yahia.healthysiabires.helpers.Helper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+-import com.yahia.healthysiabires.helpers.ViewHelper;
  
 -import org.achartengine.model.SeriesSelection;
  import org.achartengine.model.XYSeries;
@@ -5300,16 +5300,16 @@ index 2b17db8..7beb33c 100644
                  updateContent();
              }
          };
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java
 index 79b2883..1dcb148 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/ChartHelper.java
 @@ -6,7 +6,7 @@ import android.graphics.Color;
  import android.graphics.Paint;
  
- import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
+ import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
  
  import org.achartengine.ChartFactory;
  import org.achartengine.GraphicalView;
@@ -5322,20 +5322,20 @@ index 79b2883..1dcb148 100644
                          activity.getResources().getIntArray(R.array.bloodsugar_extrema)[0]);
          renderer.setYAxisMin(minimum);
      }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
 index d6a361c..3128f0a 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/FileHelper.java
 @@ -4,10 +4,11 @@ import android.app.ProgressDialog;
  import android.content.Context;
  import android.os.AsyncTask;
  import android.os.Environment;
 +import android.util.Log;
  
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
  import com.itextpdf.text.BaseColor;
  import com.itextpdf.text.Chunk;
  import com.itextpdf.text.Document;
@@ -5389,7 +5389,7 @@ index d6a361c..3128f0a 100644
              File file = new File(directory + "/backup" +
 @@ -132,8 +135,8 @@ public class FileHelper {
              catch (IOException ex) {
-                 //Log.e("DiaguardError", ex.getMessage());
+                 //Log.e("MydiabetesError", ex.getMessage());
              }
 -
 -            return file;
@@ -5413,7 +5413,7 @@ index d6a361c..3128f0a 100644
 +                */
                  reader.close();
              } catch (IOException ex) {
-                 //Log.e("DiaguardError", ex.getMessage());
+                 //Log.e("MydiabetesError", ex.getMessage());
 @@ -189,26 +194,33 @@ public class FileHelper {
          }
      }
@@ -5553,8 +5553,8 @@ index d6a361c..3128f0a 100644
                  document.close();
              }
              catch (Exception ex) {
--                //Log.e("DiaguardError", ex.getMessage());
-+                Log.e("DiaguardError", ex.getMessage());
+-                //Log.e("MydiabetesError", ex.getMessage());
++                Log.e("MydiabetesError", ex.getMessage());
              }
  
              return file;
@@ -5615,16 +5615,16 @@ index d6a361c..3128f0a 100644
              Chunk chunk = new Chunk(stamp,
                      FontFactory.getFont(FontFactory.HELVETICA, 9, BaseColor.GRAY));
              ColumnText.showTextAligned(writer.getDirectContent(),
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java
 index 9cf7efa..9cd3990 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java
-@@ -2,18 +2,24 @@ package com.mydiabetesprt.diabetes.helpers;
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Helper.java
+@@ -2,18 +2,24 @@ package com.yahia.healthysiabires.helpers;
  
  import android.content.Context;
  
-+import com.mydiabetesprt.diabetes.DiaguardApplication;
- import com.mydiabetesprt.diabetes.R;
++import com.yahia.healthysiabires.MydiabetesApplication;
+ import com.yahia.healthysiabires.R;
  
 +import org.joda.time.DateTime;
 +import org.joda.time.format.DateTimeFormat;
@@ -5661,7 +5661,7 @@ index 9cf7efa..9cd3990 100644
 -        int minute = time.get(Calendar.MINUTE);
 -        return hour + ((float)minute / 60.0f);
 +    private static String getDatePattern() {
-+        Format dateFormat = android.text.format.DateFormat.getDateFormat(DiaguardApplication.getContext().getApplicationContext());
++        Format dateFormat = android.text.format.DateFormat.getDateFormat(MydiabetesApplication.getContext().getApplicationContext());
 +        return ((SimpleDateFormat)dateFormat).toLocalizedPattern();
      }
  
@@ -5714,20 +5714,20 @@ index 9cf7efa..9cd3990 100644
 +        return stringBuilder.toString();
 +    }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
 index da33a3d..819ea60 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/PreferenceHelper.java
 @@ -5,18 +5,19 @@ import android.content.SharedPreferences;
  import android.content.res.Resources;
  import android.preference.PreferenceManager;
  
--import com.mydiabetesprt.diabetes.MainActivity;
- import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.preferences.CategoryPreference;
- import com.mydiabetesprt.diabetes.preferences.FactorPreference;
+-import com.yahia.healthysiabires.MainActivity;
+ import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.preferences.CategoryPreference;
+ import com.yahia.healthysiabires.preferences.FactorPreference;
  
 +import org.joda.time.DateTime;
 +import org.joda.time.format.DateTimeFormat;
@@ -5909,16 +5909,16 @@ index da33a3d..819ea60 100644
 +        return activeCategories.toArray(new Measurement.Category[activeCategories.size()]);
      }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java
 index e2e745a..4228483 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/helpers/Validator.java
 @@ -6,7 +6,7 @@ import android.text.Editable;
  import android.widget.EditText;
  
- import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
+ import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
  
  /**
   * Created by Filip on 05.11.13.
@@ -5940,21 +5940,21 @@ index e2e745a..4228483 100644
          PreferenceHelper preferenceHelper = new PreferenceHelper(context);
  
          if (!containsNumber(value)) {
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
 index 65f8553..2a0635b 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BackupPreference.java
 @@ -6,7 +6,6 @@ import android.content.Context;
  import android.content.DialogInterface;
  import android.preference.DialogPreference;
  import android.util.AttributeSet;
 -import android.util.Log;
  
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
-@@ -14,11 +13,11 @@ import com.mydiabetesprt.diabetes.helpers.FileHelper;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+@@ -14,11 +13,11 @@ import com.yahia.healthysiabires.helpers.FileHelper;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.ViewHelper;
  
 +import org.joda.time.DateTime;
 +import org.joda.time.format.DateTimeFormat;
@@ -6000,18 +6000,18 @@ index 65f8553..2a0635b 100644
          }
  
          AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java
 index fb2159d..e0ba408 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/BloodSugarPreference.java
 @@ -13,7 +13,7 @@ import android.widget.EditText;
  import android.widget.TextView;
  
- import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.Validator;
+ import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.Validator;
  
 @@ -47,12 +47,12 @@ public class BloodSugarPreference extends EditTextPreference {
              throw new Resources.NotFoundException();
@@ -6047,18 +6047,18 @@ index fb2159d..e0ba408 100644
              editor.putString(getKey(), Float.toString(value));
              editor.commit();
          }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java
 index a531f4f..602f814 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CategoryPreference.java
 @@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
  import android.widget.ListView;
  
- import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.Event;
-+import com.mydiabetesprt.diabetes.database.Measurement;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
- import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+ import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.Event;
++import com.yahia.healthysiabires.database.Measurement;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+ import com.yahia.healthysiabires.helpers.ViewHelper;
  
 @@ -44,8 +44,8 @@ public class CategoryPreference extends DialogPreference {
          listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -6080,15 +6080,15 @@ index a531f4f..602f814 100644
                  editor.apply();
              }
              else {
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
 index dec4e39..1e65af3 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/preferences/CleanUpPreference.java
 @@ -12,9 +12,8 @@ import android.widget.DatePicker;
- import com.mydiabetesprt.diabetes.R;
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
- import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
--import com.mydiabetesprt.diabetes.helpers.ViewHelper;
+ import com.yahia.healthysiabires.R;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+ import com.yahia.healthysiabires.helpers.PreferenceHelper;
+-import com.yahia.healthysiabires.helpers.ViewHelper;
  
 -import java.util.Calendar;
 +import org.joda.time.DateTime;
@@ -6138,13 +6138,13 @@ index dec4e39..1e65af3 100644
                      .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                          public void onClick(DialogInterface dialog, int id) {
                              dialog.cancel();
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java
 deleted file mode 100644
 index 78e5d2e..0000000
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EndlessListView.java
 +++ /dev/null
 @@ -1,93 +0,0 @@
--package com.mydiabetesprt.diabetes.views;
+-package com.yahia.healthysiabires.views;
 -
 -import android.content.Context;
 -import android.util.AttributeSet;
@@ -6153,7 +6153,7 @@ index 78e5d2e..0000000
 -import android.widget.AbsListView;
 -import android.widget.ListView;
 -
--import com.mydiabetesprt.diabetes.adapters.ListViewAdapterLog;
+-import com.yahia.healthysiabires.adapters.ListViewAdapterLog;
 -
 -import java.util.List;
 -
@@ -6238,22 +6238,22 @@ index 78e5d2e..0000000
 -    }
 -}
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java
 deleted file mode 100644
 index 9114d82..0000000
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/views/EventEditText.java
 +++ /dev/null
 @@ -1,64 +0,0 @@
--package com.mydiabetesprt.diabetes.views;
+-package com.yahia.healthysiabires.views;
 -
 -import android.content.Context;
 -import android.text.Editable;
 -import android.widget.EditText;
 -
--import com.mydiabetesprt.diabetes.R;
--import com.mydiabetesprt.diabetes.database.Event;
--import com.mydiabetesprt.diabetes.helpers.PreferenceHelper;
--import com.mydiabetesprt.diabetes.helpers.Validator;
+-import com.yahia.healthysiabires.R;
+-import com.yahia.healthysiabires.database.Event;
+-import com.yahia.healthysiabires.helpers.PreferenceHelper;
+-import com.yahia.healthysiabires.helpers.Validator;
 -
 -/**
 - * Created by Filip on 01.06.2014.
@@ -6308,7 +6308,7 @@ index 9114d82..0000000
 -        return true;
 -    }
 -}
-diff --git a/Diaguard/src/main/res/drawable-hdpi/ic_home.png b/Diaguard/src/main/res/drawable-hdpi/ic_home.png
+diff --git a/Mydiabetes/src/main/res/drawable-hdpi/ic_home.png b/Mydiabetes/src/main/res/drawable-hdpi/ic_home.png
 deleted file mode 100644
 index 7159ffd6e10fc6f34efaeadef7643172a574b9b9..0000000000000000000000000000000000000000
 GIT binary patch
@@ -6341,7 +6341,7 @@ z*icF;zsM3G3f^1Y6&|%_ft^VSqc)069k?3U3tSihm?hv%;JVs^NwKOHaFfe2MYSKe
 z)opapEcI=dvkf>5v@<~IxT5c&TDwz0P+Ndk-7YRkJG<-ywt4|(03-u8y6tp60zL+I
 exMM-taQ*=#1ReJkkc)u;0000<MNUMnLSTXhX)U+_
 
-diff --git a/Diaguard/src/main/res/drawable-mdpi/ic_home.png b/Diaguard/src/main/res/drawable-mdpi/ic_home.png
+diff --git a/Mydiabetes/src/main/res/drawable-mdpi/ic_home.png b/Mydiabetes/src/main/res/drawable-mdpi/ic_home.png
 deleted file mode 100644
 index 8200113c1b24f54a255427d46f997c34a29591e8..0000000000000000000000000000000000000000
 GIT binary patch
@@ -6366,7 +6366,7 @@ z4(8{9W4U&Ru}B;MCfaCzs$(z0V-RbA>uoSU9OawN_T{lHbtGEBRy7Tr?`n<@!|-p$
 z1}*@#Ce2?2wm2~jN&MAdBXAe^kh0=KK(CXdoH`(<fcwCM=z4P=#{U3X8rw8|DFpNY
 O0000<MNUMnLSTX&wpuX&
 
-diff --git a/Diaguard/src/main/res/drawable-xhdpi/ic_home.png b/Diaguard/src/main/res/drawable-xhdpi/ic_home.png
+diff --git a/Mydiabetes/src/main/res/drawable-xhdpi/ic_home.png b/Mydiabetes/src/main/res/drawable-xhdpi/ic_home.png
 deleted file mode 100644
 index c413eb7c2844b79b83449ae3fc44616ecc6fe9a5..0000000000000000000000000000000000000000
 GIT binary patch
@@ -6407,7 +6407,7 @@ z^vZP<f32juJFe6>iiEmqX|bfe6(;Eel2+9BRh;3uVM0jKdrK7lq@;P0rg*7OX+(Jc
 zawxTVIV|Z7SGAZSlS9?CHG}XwBt0%^sw-G-M9h`6ThiYRS~a^REgb1yr(7duN_tw-
 kHc8(|dPdSc<5Bqk0pe=?BT4h_YXATM07*qoM6N<$f?5IiH2?qr
 
-diff --git a/Diaguard/src/main/res/drawable-xxhdpi/ic_home.png b/Diaguard/src/main/res/drawable-xxhdpi/ic_home.png
+diff --git a/Mydiabetes/src/main/res/drawable-xxhdpi/ic_home.png b/Mydiabetes/src/main/res/drawable-xxhdpi/ic_home.png
 deleted file mode 100644
 index 27fcf2e1c95f153ef84021aa9572f091e54a6499..0000000000000000000000000000000000000000
 GIT binary patch
@@ -6468,7 +6468,7 @@ zYLea|>8d`5{`*3WbE2fW7s(ZrDg69ZNiRuibRbPL{O#(bzHw<BB$=eoOS)Ckwt2+a
 zA?Y?r7fbRlLOKg}Z;K?2OIjuAK}nBFI#1H^lEysa9M1m$QAC=qY16R600000NkvXX
 Hu0mjfTEqii
 
-diff --git a/Diaguard/src/main/res/drawable-xxxhdpi/ic_home.png b/Diaguard/src/main/res/drawable-xxxhdpi/ic_home.png
+diff --git a/Mydiabetes/src/main/res/drawable-xxxhdpi/ic_home.png b/Mydiabetes/src/main/res/drawable-xxxhdpi/ic_home.png
 index 440fa844120d59ea734155ff075312fc2ccc665f..b7d875cac3e924a5a91e4c9cafbbf3a5ee86d744 100644
 GIT binary patch
 delta 2552
@@ -6595,10 +6595,10 @@ zlAk0wU!{(SJsZp-c`(TzWf1sRlRPv%tJ7PzBSaNujrJz_J(3$pj!z@tn_))hGLrjG
 z^`1ghE-Q38okBSzKSc5>lIy1k{1KAZl02Q{UMh1$T{A+1<N+j4A^A|4N<EF_fg~FW
 b{9^ep1p$PEnH51#00000NkvXXu0mjfG<$z`
 
-diff --git a/Diaguard/src/main/res/layout/activity_main.xml b/Diaguard/src/main/res/layout/activity_main.xml
+diff --git a/Mydiabetes/src/main/res/layout/activity_main.xml b/Mydiabetes/src/main/res/layout/activity_main.xml
 index 1d33a08..f11a7b4 100644
---- a/Diaguard/src/main/res/layout/activity_main.xml
-+++ b/Diaguard/src/main/res/layout/activity_main.xml
+--- a/Mydiabetes/src/main/res/layout/activity_main.xml
++++ b/Mydiabetes/src/main/res/layout/activity_main.xml
 @@ -1,22 +1,7 @@
  <?xml version="1.0" encoding="utf-8"?>
  
@@ -6627,10 +6627,10 @@ index 1d33a08..f11a7b4 100644
 \ No newline at end of file
 +    android:layout_height="match_parent" />
 \ No newline at end of file
-diff --git a/Diaguard/src/main/res/layout/fragment_main.xml b/Diaguard/src/main/res/layout/fragment_main.xml
+diff --git a/Mydiabetes/src/main/res/layout/fragment_main.xml b/Mydiabetes/src/main/res/layout/fragment_main.xml
 index c2c7869..dee4e86 100644
---- a/Diaguard/src/main/res/layout/fragment_main.xml
-+++ b/Diaguard/src/main/res/layout/fragment_main.xml
+--- a/Mydiabetes/src/main/res/layout/fragment_main.xml
++++ b/Mydiabetes/src/main/res/layout/fragment_main.xml
 @@ -1,7 +1,6 @@
  <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="match_parent"
@@ -6683,11 +6683,11 @@ index c2c7869..dee4e86 100644
  
                  <ImageView
                      android:layout_width="@dimen/size_image"
-diff --git a/Diaguard/src/main/res/menu/main.xml b/Diaguard/src/main/res/menu/main.xml
+diff --git a/Mydiabetes/src/main/res/menu/main.xml b/Mydiabetes/src/main/res/menu/main.xml
 new file mode 100644
 index 0000000..78e57fa
 --- /dev/null
-+++ b/Diaguard/src/main/res/menu/main.xml
++++ b/Mydiabetes/src/main/res/menu/main.xml
 @@ -0,0 +1,21 @@
 +<?xml version="1.0" encoding="utf-8"?>
 +
@@ -6711,11 +6711,11 @@ index 0000000..78e57fa
 +
 +</menu>
 \ No newline at end of file
-diff --git a/Diaguard/src/main/res/values-w820dp/dimens.xml b/Diaguard/src/main/res/values-w820dp/dimens.xml
+diff --git a/Mydiabetes/src/main/res/values-w820dp/dimens.xml b/Mydiabetes/src/main/res/values-w820dp/dimens.xml
 new file mode 100644
 index 0000000..63fc816
 --- /dev/null
-+++ b/Diaguard/src/main/res/values-w820dp/dimens.xml
++++ b/Mydiabetes/src/main/res/values-w820dp/dimens.xml
 @@ -0,0 +1,6 @@
 +<resources>
 +    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
@@ -6723,10 +6723,10 @@ index 0000000..63fc816
 +         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
 +    <dimen name="activity_horizontal_margin">64dp</dimen>
 +</resources>
-diff --git a/Diaguard/src/main/res/values/styles.xml b/Diaguard/src/main/res/values/styles.xml
+diff --git a/Mydiabetes/src/main/res/values/styles.xml b/Mydiabetes/src/main/res/values/styles.xml
 index 3ca9fc1..4df59da 100644
---- a/Diaguard/src/main/res/values/styles.xml
-+++ b/Diaguard/src/main/res/values/styles.xml
+--- a/Mydiabetes/src/main/res/values/styles.xml
++++ b/Mydiabetes/src/main/res/values/styles.xml
 @@ -30,10 +30,10 @@
      </style>
      
@@ -6768,21 +6768,21 @@ Subject: [PATCH] Database Upgrade: Added makla and replaced Events with Entries
  .../mydiabetesprt/diabetes/database/Measurement.java |  53 +++++++++
  .../diaguard/fragments/MainFragment.java           |   2 +
  7 files changed, 297 insertions(+), 22 deletions(-)
- create mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
- create mode 100644 Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
+ create mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
+ create mode 100644 Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
 
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
 index 9f46ca0..506ef27 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/NewEventActivity.java
 @@ -33,6 +33,7 @@ import android.widget.TimePicker;
  
- import com.mydiabetesprt.diabetes.database.DatabaseDataSource;
- import com.mydiabetesprt.diabetes.database.DatabaseHelper;
-+import com.mydiabetesprt.diabetes.database.Entry;
- import com.mydiabetesprt.diabetes.database.Event;
- import com.mydiabetesprt.diabetes.database.makla;
- import com.mydiabetesprt.diabetes.fragments.DatePickerFragment;
+ import com.yahia.healthysiabires.database.DatabaseDataSource;
+ import com.yahia.healthysiabires.database.DatabaseHelper;
++import com.yahia.healthysiabires.database.Entry;
+ import com.yahia.healthysiabires.database.Event;
+ import com.yahia.healthysiabires.database.makla;
+ import com.yahia.healthysiabires.fragments.DatePickerFragment;
 @@ -253,9 +254,16 @@ public class NewEventActivity extends ActionBarActivity {
          }
  
@@ -6810,10 +6810,10 @@ index 9f46ca0..506ef27 100644
              if(makla != null) {
                  for(int eventPosition = 0; eventPosition < events.size(); eventPosition++) {
                      if(events.get(eventPosition).getCategory() == Event.Category.Meal) {
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
 index a53ab28..e08a3ed 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseDataSource.java
 @@ -48,7 +48,71 @@ public class DatabaseDataSource {
  
      // endregion
@@ -6896,12 +6896,12 @@ index a53ab28..e08a3ed 100644
          return db.insertOrThrow(DatabaseHelper.makla, null, values);
      }
  
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
 index a99b678..62ec161 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/DatabaseHelper.java
 @@ -1,9 +1,16 @@
- package com.mydiabetesprt.diabetes.database;
+ package com.yahia.healthysiabires.database;
  
 +import android.content.ContentValues;
  import android.content.Context;
@@ -6909,7 +6909,7 @@ index a99b678..62ec161 100644
  import android.database.sqlite.SQLiteDatabase;
  import android.database.sqlite.SQLiteOpenHelper;
  
-+import com.mydiabetesprt.diabetes.helpers.Helper;
++import com.yahia.healthysiabires.helpers.Helper;
 +
 +import java.util.ArrayList;
 +import java.util.List;
@@ -7070,15 +7070,15 @@ index a99b678..62ec161 100644
      }
  }
 \ No newline at end of file
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
 new file mode 100644
 index 0000000..9a8cedb
 --- /dev/null
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Entry.java
 @@ -0,0 +1,50 @@
-+package com.mydiabetesprt.diabetes.database;
++package com.yahia.healthysiabires.database;
 +
-+import com.mydiabetesprt.diabetes.helpers.Helper;
++import com.yahia.healthysiabires.helpers.Helper;
 +
 +import java.text.ParseException;
 +import java.util.Calendar;
@@ -7126,10 +7126,10 @@ index 0000000..9a8cedb
 +        this.note = note;
 +    }
 +}
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
 index 06aa3a0..6cf1486 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Event.java
 @@ -15,6 +15,7 @@ public class Event {
      private Calendar date;
      private String notes;
@@ -7151,15 +7151,15 @@ index 06aa3a0..6cf1486 100644
 +        this.entryId = entryId;
 +    }
  }
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
 new file mode 100644
 index 0000000..48558e2
 --- /dev/null
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/database/Measurement.java
 @@ -0,0 +1,53 @@
-+package com.mydiabetesprt.diabetes.database;
++package com.yahia.healthysiabires.database;
 +
-+import com.mydiabetesprt.diabetes.helpers.Helper;
++import com.yahia.healthysiabires.helpers.Helper;
 +
 +import java.text.ParseException;
 +import java.util.Calendar;
@@ -7210,10 +7210,10 @@ index 0000000..48558e2
 +        this.entryId = entryId;
 +    }
 +}
-diff --git a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+diff --git a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 index bb78173..fed9829 100644
---- a/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
-+++ b/Diaguard/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
+--- a/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
++++ b/Mydiabetes/src/main/java/com/mydiabetesprt/diabetes/fragments/MainFragment.java
 @@ -88,6 +88,7 @@ public class MainFragment extends Fragment {
  
          time = Calendar.getInstance();

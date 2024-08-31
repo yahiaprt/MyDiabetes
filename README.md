@@ -31,7 +31,7 @@ It replaces the handwritten diary and helps the user to quickly and easily recor
 
 #### History
 
-Development of Diaguard started in October 2013. It was as one of several small projects of one developer who was trying to gain traction on the Android platform. This project soon evolved into a vision named Diaguard which saw its initial release in July 2014. Since then it has received many updates, much appreciated feedback from its users and a little bit of marketing with the help of direct contact and mouth to mouth propaganda. But at the end of the day every line of code has been provided by one sole developer in his spare-time. This should change in April 2020 when the decision was made to go open source.
+Development of Mydiabetes started in October 2013. It was as one of several small projects of one developer who was trying to gain traction on the Android platform. This project soon evolved into a vision named Mydiabetes which saw its initial release in July 2014. Since then it has received many updates, much appreciated feedback from its users and a little bit of marketing with the help of direct contact and mouth to mouth propaganda. But at the end of the day every line of code has been provided by one sole developer in his spare-time. This should change in April 2020 when the decision was made to go open source.
 
 #### Goals
 
@@ -49,7 +49,7 @@ Mydiabetes is not a medical app and serves no therapeutical purpose.
 
 There is none. 
 
-Mydiabetes exists for three reasons: for learning, for fun and for saying thank you. This app kickstarted the career of a professional software developer by leading through the whole software lifecycle: creating a concept, building software from scratch, publishing it to the masses and maintaining a legacy project with additions sprinkled here and there. Additionally it was and is pure fun to enhance this app and to see feedback from a helpful and thankful community. Last but not least Diaguard is a way of giving something back.
+Mydiabetes exists for three reasons: for learning, for fun and for saying thank you. This app kickstarted the career of a professional software developer by leading through the whole software lifecycle: creating a concept, building software from scratch, publishing it to the masses and maintaining a legacy project with additions sprinkled here and there. Additionally it was and is pure fun to enhance this app and to see feedback from a helpful and thankful community. Last but not least Mydiabetes is a way of giving something back.
 
 For these reasons, Mydiabetes has been, is and will always be free of cost.
 
@@ -81,7 +81,7 @@ Domain-driven design improves the structure by grouping files in features. Every
  
 #### Testing
 
-Testing takes place via [JUnit](https://junit.org), [Espresso](https://developer.android.com/training/testing/espresso) and [Robolectric](http://robolectric.org). Tests are few in number and far from perfect, since most of Diaguard has been developed in the early of days of one developer. However the decision to go open source came with a code of conduct, and instrumentation testing major features was the first step in a right direction. The goal now is to unit- and instrumentation test every new and edited feature in order to increase the quality with every commit.
+Testing takes place via [JUnit](https://junit.org), [Espresso](https://developer.android.com/training/testing/espresso) and [Robolectric](http://robolectric.org). Tests are few in number and far from perfect, since most of Mydiabetes has been developed in the early of days of one developer. However the decision to go open source came with a code of conduct, and instrumentation testing major features was the first step in a right direction. The goal now is to unit- and instrumentation test every new and edited feature in order to increase the quality with every commit.
 
 #### Third-party licenses
 
@@ -113,7 +113,7 @@ This software uses following technologies with great appreciation:
 * [SearchView](https://github.com/lapism/SearchView)
 * [Ticker](https://github.com/robinhood/ticker)
 
-These dependencies are bundled with Diaguard but under the terms of their respective license.
+These dependencies are bundled with Mydiabetes but under the terms of their respective license.
 
 ## Legal
 

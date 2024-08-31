@@ -69,7 +69,7 @@
             android:visibility="gone"
             tools:ignore="HardcodedText" />
 
-        <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+        <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
             android:id="@+id/makla_input_value_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

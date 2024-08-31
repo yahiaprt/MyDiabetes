@@ -106,14 +106,14 @@
 -dontwarn com.squareup.okhttp.*
 -dontwarn retrofit.appengine.**
 
--keep class com.mydiabetesprt.diabetes.networkage.OpenFoodFacts.dto.**
--keepclassmembers class com.mydiabetesprt.diabetes.networkage.OpenFoodFacts.** {
+-keep class com.yahia.healthysiabires.networkage.OpenFoodFacts.dto.**
+-keepclassmembers class com.yahia.healthysiabires.networkage.OpenFoodFacts.** {
    public void set*(***);
   public *** get*();
   public *** is*();
 }
 
--keepclassmembers class com.mydiabetesprt.diabetes.networkage.OpenFoodFacts.** {
+-keepclassmembers class com.yahia.healthysiabires.networkage.OpenFoodFacts.** {
       public <fields>;}
 
 ##---------------End: Retrofit ----------

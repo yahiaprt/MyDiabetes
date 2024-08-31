@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:minHeight="@dimen/height_element"
     android:layout_marginBottom="2dp"
-    app:cardCornerRadius="4dp"
+    app:cardCornerRadius="18dp"
     app:cardElevation="2dp"
     app:cardUseCompatPadding="true">
 

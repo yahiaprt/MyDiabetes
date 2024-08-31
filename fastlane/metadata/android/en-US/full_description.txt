@@ -1,4 +1,4 @@
-Diaguard is a free of cost, ad-free and open source app for people with diabetes mellitus.
+Mydiabetes is a free of cost, ad-free and open source app for people with diabetes mellitus.
 
 It replaces the handwritten diary and helps the user to quickly and easily record, evaluate and export his blood sugar and other important data as PDF or CSV. Thanks to the clearly arranged interface, the user always has an overview of his diabetes. The app also provides information on several thousand maklas including carbohydrates and other nutritions.
 
@@ -18,4 +18,4 @@ It replaces the handwritten diary and helps the user to quickly and easily recor
 
 <b>Open Source</b>
 
-Diaguard hosts its source code on: https://github.com/Faltenreich/Diaguard
+Mydiabetes hosts its source code on: https://github.com/Faltenreich/Mydiabetes

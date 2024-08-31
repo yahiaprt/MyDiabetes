@@ -76,7 +76,7 @@
     <string name="insulin">Insulina</string>
     <string name="latest">Antes [value] [unit]</string>
     <string name="latest_moments">En este momento</string>
-    <string name="licenses">Developer : Yahia Prt</string>
+    <string name="licenses">Developer :  Prt</string>
     <string name="log">Protocolo</string>
     <string name="mail">E-Mail</string>
     <string name="meal">Alimento</string>
@@ -250,7 +250,7 @@
     <string name="about_financing">Financiación</string>
     <string name="about_financing_desc">No existe ningún apoyo financiero por parte de organizaciones comerciales o no comerciales, que hayan contribuido con fondos, servicios o materiales para la aplicación. La aplicación está financiada en su totalidad por el desarrollador.</string>
     <string name="about_advertisement">Política de publicidad</string>
-    <string name="about_advertisement_desc">Diaguard es y seguirá siendo completamente libre de publicidad.</string>
+    <string name="about_advertisement_desc">Mydiabetes es y seguirá siendo completamente libre de publicidad.</string>
     <string name="about_health">Fuentes</string>
     <string name="about_health_desc">Toda la información de la salud, se basa en las recomendaciones de Diabetólogos Alemanes reconocidos.</string>
     <string name="about_privacy">Protección de datos</string>

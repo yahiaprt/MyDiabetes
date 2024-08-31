@@ -40,7 +40,7 @@
                         android:src="@drawable/ic_category_bloodsugar"
                         android:tint="?iconColorPrimary" />
 
-                    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+                    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
                         android:id="@+id/calculator_bloodsugar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                         android:inputType="numberDecimal">
 
                         <requestFocus />
-                    </com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput>
+                    </com.yahia.healthysiabires.partage.view.texteditor.StickHintInput>
 
                 </LinearLayout>
 
@@ -64,7 +64,7 @@
                         android:src="@drawable/ic_done"
                         android:tint="?iconColorPrimary" />
 
-                    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+                    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
                         android:id="@+id/calculator_target"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
                         android:src="@drawable/ic_done_all"
                         android:tint="?iconColorPrimary" />
 
-                    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+                    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
                         android:id="@+id/calculator_correction"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                         android:src="@drawable/ic_factor"
                         android:tint="?iconColorPrimary" />
 
-                    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+                    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
                         android:id="@+id/calculator_factor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
 
                 </LinearLayout>
 
-                <com.mydiabetesprt.diabetes.future.makla.input.maklaInputView
+                <com.yahia.healthysiabires.future.makla.input.maklaInputView
                     android:id="@+id/calculator_makla_list_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

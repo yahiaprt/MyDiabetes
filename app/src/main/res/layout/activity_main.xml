@@ -22,26 +22,30 @@
             <FrameLayout
                 android:id="@+id/container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent">
+
+            </FrameLayout>
 
             <com.github.clans.fab.FloatingActionButton
-                style="@style/FloatingActionButton"
                 android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:src="@drawable/fab_add"
+                style="@style/FloatingActionButton"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical|center_horizontal"
                 android:contentDescription="@string/entry_new"
-                app:fab_colorNormal="?backgroundColorGreen"
-                app:layout_behavior="com.mydiabetesprt.diabetes.partage.view.coordinatorlayout.SlideOutBehavior"
-                app:layout_dodgeInsetEdges="bottom"/>
+                android:src="@drawable/fab_add"
+                app:fab_colorNormal="#26DE81"
+                app:layout_anchor="@+id/container"
+                app:layout_anchorGravity="top|center"
+                app:layout_behavior="com.yahia.healthysiabires.partage.view.coordinatorlayout.SlideOutBehavior"
+                app:layout_dodgeInsetEdges="bottom" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigation_drawer"
             android:layout_height="match_parent"
-            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_width="0dp"
             android:layout_gravity="start"
             app:menu="@menu/navigation"
             app:headerLayout="@layout/view_empty"

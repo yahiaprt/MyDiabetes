@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.opencsv:opencsv:3.10">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.10/ef5412b1c4d299e555b137c9a131cf019169c79b/opencsv-3.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.10/ef5412b1c4d299e555b137c9a131cf019169c79b/opencsv-3.10.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.10/55bd789df2cacf3973bfce89aeaad31d58fea320/opencsv-3.10-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.10/55bd789df2cacf3973bfce89aeaad31d58fea320/opencsv-3.10-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.10/35be522a4c76c489680812fec9a484cb54c4702a/opencsv-3.10-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.10/35be522a4c76c489680812fec9a484cb54c4702a/opencsv-3.10-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

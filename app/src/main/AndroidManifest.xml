@@ -1,89 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.yahia.healthysiabires">
-
+    <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name="com.mydiabetesprt.diabetes.healthysiabiresApplication"
+        android:name="com.yahia.healthysiabires.healthysiabiresApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <service
-            android:name="com.mydiabetesprt.diabetes.NotificationServiceprt"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="com.my_sugr.mydiabetes
 
-.NotificationService" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.mydiabetesprt.diabetes.NotificationServiceprt2"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="com.my_sugr.mydiabetes
-
-.NotificationService2" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </service>
-    <meta-data
-        android:name="com.google.android.gms.ads.APPLICATION_ID"
-        android:value="ca-app-pub-9962218403087770~6184846770"/>
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="601"
+            tools:replace="android:value" />
+        <meta-data
+            android:name="com.google.android.play.billingclient.publicKey"
+            android:value="@string/idplaystor" />
 
 
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.navigation.MainActivity"
+            android:name=".future.navigation.billings"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+
+        <service
+            android:name="com.yahia.healthysiabires.NotificationServiceprt"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.my_sugr.mydiabetes  .NotificationService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.yahia.healthysiabires.NotificationServiceprt2"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.my_sugr.mydiabetes  .NotificationService2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+            android:exported="true">
+
+            <!-- Intent filters and other attributes -->
+        </activity>
+        <activity
+            android:name=".future.navigation.MainActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="true"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
             android:resizeableActivity="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
             tools:ignore="UnusedAttribute">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity"
+            android:name="com.yahia.healthysiabires.future.Entrer.editor.EntryEditActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="true"
             android:label="@string/entry_new"
-            android:windowSoftInputMode="adjustResize|stateHidden"
-            android:exported="true">
+            android:windowSoftInputMode="adjustResize|stateHidden">
             <meta-data
                 android:name=".future.entry.edit.EntryEditActivity"
                 android:value=".future.navigation.MainActivity" />
         </activity>
-
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.Entrer.search.EntrerSearchActivity"
+            android:name="com.yahia.healthysiabires.future.Entrer.search.EntrerSearchActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/search"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/AppTheme.Transparent">
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mydiabetesprt.diabetes.future.navigation.MainActivity" />
+                android:value="com.yahia.healthysiabires.future.navigation.MainActivity" />
         </activity>
-
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.makla.search.maklaSearchActivity"
+            android:name="com.yahia.healthysiabires.future.makla.search.maklaSearchActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/makla"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -91,9 +108,8 @@
                 android:name=".future.makla.search.maklaSearchActivity"
                 android:value=".future.navigation.MainActivity" />
         </activity>
-
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.makla.detail.maklaDetailActivity"
+            android:name="com.yahia.healthysiabires.future.makla.detail.maklaDetailActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/makla"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -101,15 +117,13 @@
                 android:name=".future.makla.detail.maklaDetailActivity"
                 android:value=".future.makla.search.maklaSearchActivity" />
         </activity>
-
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.makla.editor.maklaEditActivity"
+            android:name="com.yahia.healthysiabires.future.makla.editor.maklaEditActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/makla_new"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-
+            android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.tag.TagListActivity"
+            android:name="com.yahia.healthysiabires.future.tag.TagListActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/tags"
             android:windowSoftInputMode="adjustResize|stateHidden">
@@ -117,15 +131,13 @@
                 android:name=".future.tag.TagListActivity"
                 android:value=".future.entry.edit.EntryEditActivity" />
         </activity>
-
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.types.typeListActivity"
+            android:name="com.yahia.healthysiabires.future.types.typeListActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/categories"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-
+            android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name="com.mydiabetesprt.diabetes.future.preference.PreferenceActivity"
+            android:name="com.yahia.healthysiabires.future.preference.PreferenceActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/settings"
             android:windowSoftInputMode="adjustPan">
@@ -141,13 +153,14 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
 
-        <receiver android:name="com.mydiabetesprt.diabetes.future.alarm.AlarmBR" />
+        <receiver android:name="com.yahia.healthysiabires.future.alarm.AlarmBR" />
 
-        <meta-data android:name="android.max_aspect" android:value="2.1"/>
-
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
     </application>
 
 </manifest>

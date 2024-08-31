@@ -1,15 +1,18 @@
 <component name="libraryTable">
   <library name="Gradle: com.code-troopers.betterpickers:library:3.1.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6024d0ef94fe0e5ba96f131d0499181a/jetified-library-3.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6024d0ef94fe0e5ba96f131d0499181a/jetified-library-3.1.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6024d0ef94fe0e5ba96f131d0499181a/jetified-library-3.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/c2743d35167fc3e5c90058f8d2eaf442/jetified-library-3.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/c2743d35167fc3e5c90058f8d2eaf442/jetified-library-3.1.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/c2743d35167fc3e5c90058f8d2eaf442/jetified-library-3.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/f8933144031c682867d89a860d8f82e7/jetified-library-3.1.0/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/f8933144031c682867d89a860d8f82e7/jetified-library-3.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/f8933144031c682867d89a860d8f82e7/jetified-library-3.1.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.code-troopers.betterpickers/library/3.1.0/4e51771c926208a9804e036f75afb5ca73a7ab74/library-3.1.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.code-troopers.betterpickers/library/3.1.0/4e51771c926208a9804e036f75afb5ca73a7ab74/library-3.1.0-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.code-troopers.betterpickers/library/3.1.0/e02635a12a96075d98d213dc389b529598b07866/library-3.1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.code-troopers.betterpickers/library/3.1.0/e02635a12a96075d98d213dc389b529598b07866/library-3.1.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

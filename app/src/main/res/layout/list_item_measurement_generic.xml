@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+<com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/value"
     android:layout_width="match_parent"

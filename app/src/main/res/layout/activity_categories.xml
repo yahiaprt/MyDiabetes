@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/fragment_categories"
-        android:name="com.mydiabetesprt.diabetes.future.types.typeListFragment"
+        android:name="com.yahia.healthysiabires.future.types.typeListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

@@ -8,14 +8,14 @@
     android:showDividers="middle"
     android:divider="@drawable/separator">
 
-    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
         android:id="@+id/pressure_systolic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/systolic"
         android:inputType="numberDecimal"/>
 
-    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
         android:id="@+id/pressure_diastolic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

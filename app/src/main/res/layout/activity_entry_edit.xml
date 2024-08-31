@@ -157,7 +157,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <com.mydiabetesprt.diabetes.future.Entrer.editor.measuration.mesorationListView
+                <com.yahia.healthysiabires.future.Entrer.editor.measuration.mesorationListView
                     style="@style/Padding"
                     android:id="@+id/layout_measurements"
                     android:layout_width="match_parent"
@@ -175,7 +175,7 @@
 
     </LinearLayout>
 
-    <com.mydiabetesprt.diabetes.future.Entrer.editor.measuration.mesorationFloatingActionMenu
+    <com.yahia.healthysiabires.future.Entrer.editor.measuration.mesorationFloatingActionMenu
         style="@style/FloatingActionMenu"
         android:id="@+id/fab_menu"
         android:layout_width="match_parent"
