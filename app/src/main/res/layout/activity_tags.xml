@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/fragment_tags"
-        android:name="com.mydiabetesprt.diabetes.future.tag.TagListFragment"
+        android:name="com.yahia.healthysiabires.future.tag.TagListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

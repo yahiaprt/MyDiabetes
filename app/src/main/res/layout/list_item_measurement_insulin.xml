@@ -8,21 +8,21 @@
     android:showDividers="middle"
     android:divider="@drawable/separator">
 
-    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
         android:id="@+id/insulin_bolus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/bolus"
         android:inputType="numberDecimal"/>
 
-    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
         android:id="@+id/insulin_correction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/correction"
         android:inputType="numberDecimal|numberSigned"/>
 
-    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
         android:id="@+id/insulin_basal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

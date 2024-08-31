@@ -38,10 +38,10 @@
             android:key="categories"
             android:title="@string/categories">
             <intent
-                android:targetPackage="com.mydiabetesprt.diabetes"
+                android:targetPackage="com.yahia.healthysiabires"
 
                 android:action="android.intent.action.VIEW"
-                android:targetClass="com.mydiabetesprt.diabetes.future.types.typeListActivity"/>
+                android:targetClass="com.yahia.healthysiabires.future.types.typeListActivity"/>
         </Preference>
 
         <Preference
@@ -49,16 +49,16 @@
             android:title="@string/tags">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:targetPackage="com.mydiabetesprt.diabetes"
-                android:targetClass="com.mydiabetesprt.diabetes.future.tag.TagListActivity"/>
+                android:targetPackage="com.yahia.healthysiabires"
+                android:targetClass="com.yahia.healthysiabires.future.tag.TagListActivity"/>
         </Preference>
 
-        <com.mydiabetesprt.diabetes.future.preference.restoration.restorationExportPreference
+        <com.yahia.healthysiabires.future.preference.restoration.restorationExportPreference
             android:key="backup"
             android:title="@string/backup"
             android:summary="@string/backup_desc"/>
 
-        <com.mydiabetesprt.diabetes.future.preference.restoration.restorationImportPreference
+        <com.yahia.healthysiabires.future.preference.restoration.restorationImportPreference
             android:key="import"
             android:title="@string/import_"
             android:summary="@string/import_desc"/>
@@ -127,33 +127,33 @@
             android:title="@string/pref_therapy_targets_highlight"
             android:defaultValue="true"/>
 
-        <com.mydiabetesprt.diabetes.future.preference.lesangusage.glucimiePreference
+        <com.yahia.healthysiabires.future.preference.lesangusage.glucimiePreference
             android:key="hyperclycemia"
             android:title="@string/pref_therapy_targets_hyperclycemia"
             android:dialogTitle="@string/pref_therapy_targets_hyperclycemia"
             android:defaultValue="180"
             android:inputType="number"/>
 
-        <com.mydiabetesprt.diabetes.future.preference.lesangusage.glucimiePreference
+        <com.yahia.healthysiabires.future.preference.lesangusage.glucimiePreference
             android:key="hypoclycemia"
             android:title="@string/pref_therapy_targets_hypoclycemia"
             android:dialogTitle="@string/pref_therapy_targets_hypoclycemia"
             android:defaultValue="60"
             android:inputType="number"/>
 
-        <com.mydiabetesprt.diabetes.future.preference.lesangusage.glucimiePreference
+        <com.yahia.healthysiabires.future.preference.lesangusage.glucimiePreference
             android:key="target"
             android:title="@string/pref_therapy_targets_target"
             android:dialogTitle="@string/pref_therapy_targets_target"
             android:defaultValue="120"
             android:inputType="number"/>
 
-        <com.mydiabetesprt.diabetes.future.preference.usin.CorrectionusinPreference
+        <com.yahia.healthysiabires.future.preference.usin.CorrectionusinPreference
             android:key="correction_value"
             android:title="@string/correction_value"
             android:summary="@string/correction_value_desc"/>
 
-        <com.mydiabetesprt.diabetes.future.preference.usin.MealusinPreference
+        <com.yahia.healthysiabires.future.preference.usin.MealusinPreference
             android:key="@string/pref_factor"
             android:title="@string/meal_factors"
             android:summary="@string/meal_factor_desc"/>
@@ -203,10 +203,10 @@
     <PreferenceCategory
         android:title="@string/about">
 
-        <com.mydiabetesprt.diabetes.future.preference.license.LicensePreference
+        <com.yahia.healthysiabires.future.preference.license.LicensePreference
             android:title="@string/licenses"/>
 
-        <com.mydiabetesprt.diabetes.future.preference.about.AboutPreference
+        <com.yahia.healthysiabires.future.preference.about.AboutPreference
             android:title="@string/imprint"/>
 
         <Preference

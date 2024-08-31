@@ -39,7 +39,7 @@
                         android:contentDescription="@null"
                         app:srcCompat="@drawable/ic_edit"/>
 
-                    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+                    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
                         android:id="@+id/makla_edit_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                         android:contentDescription="@null"
                         android:src="@drawable/ic_business"/>
 
-                    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+                    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
                         android:id="@+id/makla_edit_brand"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                         android:contentDescription="@null"
                         android:src="@drawable/ic_note"/>
 
-                    <com.mydiabetesprt.diabetes.partage.view.texteditor.StickHintInput
+                    <com.yahia.healthysiabires.partage.view.texteditor.StickHintInput
                         android:id="@+id/makla_edit_ingredients"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                     android:background="?attr/backgroundColorTertiary"
                     android:text="@string/nutriments_per_100g"/>
 
-                <com.mydiabetesprt.diabetes.future.makla.editor.nutritionInputLayout
+                <com.yahia.healthysiabires.future.makla.editor.nutritionInputLayout
                     android:id="@+id/makla_edit_nutrition_input_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

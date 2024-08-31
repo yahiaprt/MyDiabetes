@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/entry_search_fragment"
-        android:name="com.mydiabetesprt.diabetes.future.Entrer.search.EntrerSearchFragment"
+        android:name="com.yahia.healthysiabires.future.Entrer.search.EntrerSearchFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

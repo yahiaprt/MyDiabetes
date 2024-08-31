@@ -14,7 +14,7 @@
     android:paddingEnd="@dimen/activity_horizontal_margin"
     android:gravity="top">
 
-    <com.mydiabetesprt.diabetes.partage.view.texteditor.LocalisedNumeroEditText
+    <com.yahia.healthysiabires.partage.view.texteditor.LocalisedNumeroEditText
         android:id="@+id/input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

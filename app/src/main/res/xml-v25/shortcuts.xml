@@ -11,8 +11,8 @@
 
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.mydiabetesprt.diabetes"
-            android:targetClass="com.mydiabetesprt.diabetes.future.Entrer.editor.EntryEditActivity" />
+            android:targetPackage="com.yahia.healthysiabires"
+            android:targetClass="com.yahia.healthysiabires.future.Entrer.editor.EntryEditActivity" />
 
     </shortcut>
 

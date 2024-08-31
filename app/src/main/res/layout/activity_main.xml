@@ -37,7 +37,7 @@
                 app:fab_colorNormal="#26DE81"
                 app:layout_anchor="@+id/container"
                 app:layout_anchorGravity="top|center"
-                app:layout_behavior="com.mydiabetesprt.diabetes.partage.view.coordinatorlayout.SlideOutBehavior"
+                app:layout_behavior="com.yahia.healthysiabires.partage.view.coordinatorlayout.SlideOutBehavior"
                 app:layout_dodgeInsetEdges="bottom" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
