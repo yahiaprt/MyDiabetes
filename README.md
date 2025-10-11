@@ -32,8 +32,6 @@ It replaces the traditional paper diary and provides tools to record, monitor, a
 The **MyDiabetes** project was started in **2019** as a personal learning challenge by *Yahia Guellab* — a developer passionate about both healthcare and technology.  
 What began as a small side project to explore Android development soon grew into a complete health companion app used by many people worldwide.  
 
-In **2020**, the project became **open source**, allowing others to contribute, improve, and learn from it.  
-
 Today, MyDiabetes continues to evolve as a **community-driven, privacy-respecting, and completely free** tool for anyone who needs to monitor their diabetes efficiently.
 
 ---
