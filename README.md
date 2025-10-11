@@ -1,5 +1,5 @@
 # 🩺 MyDiabetes  
-
+ 
 [![Project Status: Active – The project is stable and actively maintained.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Release](https://img.shields.io/badge/Release-v2.0-blue.svg)](https://github.com/yahiaprt/MyDiabetes)  
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
